@@ -2,9 +2,6 @@ import { motion } from "framer-motion";
 import { Check, Heart, Target, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import doctorPatient from "@/assets/doctor-patient.jpg";
-import ctScan from "@/assets/ct-scan.jpg";
-
 const values = [
   {
     icon: Heart,
@@ -50,66 +47,70 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            {/* Main Image */}
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/5]">
-              <img
-                src={doctorPatient}
-                alt="Doctor consulting with patient"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gradient-to-br from-primary to-[hsl(175,50%,35%)]">
+              {/* Abstract medical visual */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative">
+                  {/* Heartbeat line */}
+                  <svg className="w-80 h-40 text-white/20" viewBox="0 0 320 80">
+                    <motion.path
+                      d="M0 40 L60 40 L80 20 L100 60 L120 40 L140 40 L160 10 L180 70 L200 40 L260 40 L280 20 L300 60 L320 40"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 2, ease: "easeInOut" }}
+                    />
+                  </svg>
+                  
+                  {/* Central icon */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-white/10 backdrop-blur flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center">
+                      <Heart className="w-10 h-10 text-white" />
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              {/* Floating stats card */}
+              {/* Floating cards */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-2xl p-5 shadow-2xl"
+                className="absolute bottom-8 left-8 right-8 bg-white rounded-2xl p-6 shadow-2xl"
               >
-                <div className="flex items-center justify-between text-center">
+                <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-2xl md:text-3xl font-bold text-primary">25+</div>
-                    <div className="text-xs text-muted-foreground">Years Excellence</div>
+                    <div className="text-3xl font-bold text-primary">25+</div>
+                    <div className="text-sm text-muted-foreground">Years of Excellence</div>
                   </div>
-                  <div className="w-px h-10 bg-border" />
+                  <div className="w-px h-12 bg-border" />
                   <div>
-                    <div className="text-2xl md:text-3xl font-bold text-[hsl(175,50%,40%)]">15K+</div>
-                    <div className="text-xs text-muted-foreground">Patients Yearly</div>
+                    <div className="text-3xl font-bold text-[hsl(175,50%,40%)]">15K+</div>
+                    <div className="text-sm text-muted-foreground">Patients Yearly</div>
                   </div>
-                  <div className="w-px h-10 bg-border" />
+                  <div className="w-px h-12 bg-border" />
                   <div>
-                    <div className="text-2xl md:text-3xl font-bold text-[hsl(40,70%,50%)]">98%</div>
-                    <div className="text-xs text-muted-foreground">Satisfaction</div>
+                    <div className="text-3xl font-bold text-[hsl(40,70%,50%)]">98%</div>
+                    <div className="text-sm text-muted-foreground">Satisfaction</div>
                   </div>
                 </div>
               </motion.div>
             </div>
 
-            {/* Secondary Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, x: 20 }}
-              whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="absolute -bottom-8 -right-4 md:-right-8 w-40 md:w-56 aspect-square rounded-2xl overflow-hidden border-4 border-background shadow-2xl"
-            >
-              <img
-                src={ctScan}
-                alt="CT Scan machine"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-
-            {/* Gold accent badge */}
+            {/* Gold accent */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="absolute -top-4 -right-4 w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[hsl(40,70%,50%)] flex items-center justify-center shadow-lg"
+              className="absolute -top-4 -right-4 w-24 h-24 rounded-2xl bg-[hsl(40,70%,50%)] flex items-center justify-center shadow-lg"
             >
-              <span className="text-white font-bold text-lg md:text-xl">CC</span>
+              <span className="text-white font-bold text-xl">CC</span>
             </motion.div>
           </motion.div>
 

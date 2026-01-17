@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Search, Phone, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import cedarcarelogo from "@/assets/cedarcare-logo.png";
 
 const navItems = [
   { name: "Hospital", href: "#hospital" },
@@ -45,17 +44,25 @@ const Header = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              {/* Logo Image */}
-              <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
-                <img 
-                  src={cedarcarelogo} 
-                  alt="Cedarcare Logo" 
-                  className="w-full h-full object-contain"
-                  style={{ 
-                    filter: isScrolled ? "none" : "brightness(0) invert(1)",
-                    transition: "filter 0.5s ease"
-                  }}
-                />
+              {/* CC Logo */}
+              <div className="relative w-12 h-12 flex items-center justify-center">
+                <svg viewBox="0 0 80 80" className="w-full h-full">
+                  <path
+                    d="M35 18 C18 18 8 31 8 40 C8 49 18 62 35 62 C43 62 50 58 54 54"
+                    fill="none"
+                    stroke={isScrolled ? "hsl(195, 35%, 30%)" : "white"}
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                    className="transition-colors duration-500"
+                  />
+                  <path
+                    d="M55 18 C38 18 28 31 28 40 C28 49 38 62 55 62 C63 62 70 58 74 54"
+                    fill="none"
+                    stroke="hsl(175, 50%, 45%)"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                  />
+                </svg>
               </div>
               <div>
                 <span

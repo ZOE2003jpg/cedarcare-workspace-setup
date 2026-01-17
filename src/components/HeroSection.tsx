@@ -1,206 +1,190 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { ChevronDown, Play, Shield, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import heroDoctors from "@/assets/hero-doctors.jpg";
-import ctScan from "@/assets/ct-scan.jpg";
-import doctorPatient from "@/assets/doctor-patient.jpg";
-import hospitalBuilding from "@/assets/hospital-building.jpg";
-
-const slides = [
-  {
-    image: heroDoctors,
-    title: "World-Class Medical Team",
-    subtitle: "Expert physicians dedicated to your health"
-  },
-  {
-    image: ctScan,
-    title: "Advanced Technology",
-    subtitle: "State-of-the-art diagnostic equipment"
-  },
-  {
-    image: doctorPatient,
-    title: "Compassionate Care",
-    subtitle: "Personalized attention for every patient"
-  },
-  {
-    image: hospitalBuilding,
-    title: "Modern Facilities",
-    subtitle: "Premium healthcare infrastructure"
-  }
-];
-
 const stats = [
-  { value: "25+", label: "Years Experience" },
-  { value: "50+", label: "Specialist Doctors" },
-  { value: "15K+", label: "Patients Yearly" },
-  { value: "3", label: "Business Divisions" },
+  { icon: Shield, value: "25+", label: "Years Experience" },
+  { icon: Award, value: "100+", label: "Expert Doctors" },
+  { icon: Clock, value: "24/7", label: "Emergency Care" },
 ];
 
 const HeroSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Carousel */}
+      {/* Background */}
       <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0"
-          >
-            <img
-              src={slides[currentSlide].image}
-              alt={slides[currentSlide].title}
-              className="w-full h-full object-cover"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/70 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,50%,10%)]/80 via-transparent to-[hsl(210,50%,10%)]/30" />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* Carousel Navigation */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-32 md:bottom-40 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide 
-                ? "w-8 bg-[hsl(40,70%,50%)]" 
-                : "w-2 bg-white/40 hover:bg-white/60"
-            }`}
+        {/* Gradient overlay */}
+        <div 
+          className="absolute inset-0 z-10"
+          style={{
+            background: "linear-gradient(135deg, hsla(195, 40%, 18%, 0.97) 0%, hsla(200, 35%, 25%, 0.92) 50%, hsla(195, 30%, 30%, 0.88) 100%)"
+          }}
+        />
+        
+        {/* Abstract patterns */}
+        <div className="absolute inset-0 z-0">
+          {/* Large gradient orb */}
+          <div 
+            className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] rounded-full opacity-30"
+            style={{ 
+              background: "radial-gradient(circle, hsl(175, 50%, 40%) 0%, transparent 70%)",
+              filter: "blur(80px)"
+            }}
           />
-        ))}
+          {/* Gold accent orb */}
+          <div 
+            className="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] rounded-full opacity-20"
+            style={{ 
+              background: "radial-gradient(circle, hsl(40, 70%, 50%) 0%, transparent 70%)",
+              filter: "blur(60px)"
+            }}
+          />
+        </div>
+
+        {/* Subtle grid */}
+        <div 
+          className="absolute inset-0 z-5 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(white 1px, transparent 1px),
+                              linear-gradient(90deg, white 1px, transparent 1px)`,
+            backgroundSize: '80px 80px'
+          }}
+        />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 md:px-8 relative z-10 pt-20">
-        <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
-          >
-            <span className="w-2 h-2 rounded-full bg-[hsl(40,70%,50%)] animate-pulse" />
-            <span className="text-sm text-white/90 font-medium">Excellence in Healthcare</span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight"
-          >
-            Welcome to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(175,50%,50%)] to-[hsl(40,70%,55%)]">
-              CedarCare
-            </span>{" "}
-            Group
-          </motion.h1>
-
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={currentSlide}
-              initial={{ opacity: 0, y: 10 }}
+      <div className="relative z-20 container mx-auto px-4 md:px-8 pt-32 pb-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column - Text */}
+          <div className="max-w-2xl">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.5 }}
-              className="text-xl md:text-2xl text-[hsl(40,70%,55%)] font-medium mb-4"
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-8"
             >
-              {slides[currentSlide].title}
+              <span className="w-2 h-2 rounded-full bg-[hsl(175,50%,50%)] animate-pulse" />
+              <span className="text-sm text-white/80 font-medium">World Class Healthcare in Nigeria</span>
+            </motion.div>
+
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-6"
+            >
+              Welcome to{" "}
+              <span className="relative inline-block">
+                <span className="text-[hsl(175,50%,50%)]">Cedarcare</span>
+                <motion.span
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-[hsl(40,70%,50%)] origin-left"
+                />
+              </span>{" "}
+              Group
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl"
+            >
+              We are a reputable team of world class professionals who are passionate about improving the state of healthcare systems both nationally and internationally.
             </motion.p>
-          </AnimatePresence>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl leading-relaxed"
-          >
-            Our world class medical centre is at the centre of providing significant healthcare reforms
-            within Nigeria and beyond. Experience premium healthcare services.
-          </motion.p>
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-wrap gap-4"
+            >
+              <Button 
+                size="lg"
+                className="bg-[hsl(175,50%,45%)] hover:bg-[hsl(175,50%,40%)] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Explore Our Services
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white/30 bg-white/5 text-white hover:bg-white/10 hover:border-white/50 px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all duration-300"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Video
+              </Button>
+            </motion.div>
+          </div>
 
+          {/* Right Column - Stats Cards */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="hidden lg:block"
           >
-            <Button
-              size="lg"
-              className="bg-[hsl(175,50%,40%)] hover:bg-[hsl(175,50%,35%)] text-white px-8 py-6 rounded-full text-base font-semibold group"
-            >
-              Book Appointment
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 px-8 py-6 rounded-full text-base font-semibold"
-            >
-              Our Services
-            </Button>
+            <div className="relative">
+              {/* Main card */}
+              <div className="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 shadow-2xl">
+                <h3 className="text-2xl font-semibold text-white mb-8">Why Choose Us</h3>
+                <div className="space-y-6">
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.6 + index * 0.1 }}
+                      className="flex items-center space-x-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors group"
+                    >
+                      <div className="w-14 h-14 rounded-xl bg-[hsl(175,50%,45%)]/20 flex items-center justify-center group-hover:bg-[hsl(175,50%,45%)]/30 transition-colors">
+                        <stat.icon className="w-6 h-6 text-[hsl(175,50%,50%)]" />
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-white">{stat.value}</div>
+                        <div className="text-sm text-white/60">{stat.label}</div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Floating accent card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.6 }}
+                className="absolute -bottom-6 -left-6 bg-[hsl(40,70%,50%)] rounded-2xl p-6 shadow-xl"
+              >
+                <div className="text-white font-bold text-2xl">15,000+</div>
+                <div className="text-white/80 text-sm">Patients Treated Annually</div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Stats Bar */}
+      {/* Scroll indicator */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-        className="absolute bottom-0 left-0 right-0 bg-white/10 backdrop-blur-md border-t border-white/10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
       >
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 + index * 0.1 }}
-                className="py-6 md:py-8 text-center"
-              >
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-sm text-white/60">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        <motion.a
+          href="#services"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          className="flex flex-col items-center text-white/50 hover:text-white/80 transition-colors"
+        >
+          <span className="text-xs uppercase tracking-widest mb-2">Scroll</span>
+          <ChevronDown className="w-5 h-5" />
+        </motion.a>
       </motion.div>
     </section>
   );

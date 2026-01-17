@@ -1,182 +1,151 @@
 import { motion } from "framer-motion";
-import { Building2, Package, Users, ArrowRight } from "lucide-react";
+import { Building2, Pill, Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-import hospitalBuilding from "@/assets/hospital-building.jpg";
-import healthSupplies from "@/assets/health-supplies.jpg";
-import recruitment from "@/assets/recruitment.jpg";
 
 const services = [
   {
     icon: Building2,
-    title: "CedarCare Hospital",
-    description: "State-of-the-art medical facilities offering comprehensive healthcare services with internationally trained professionals and cutting-edge technology.",
-    features: ["24/7 Emergency Care", "Advanced Diagnostics", "Specialist Consultations", "Inpatient Services"],
-    image: hospitalBuilding,
-    color: "hsl(175, 50%, 45%)",
-    link: "#hospital"
+    title: "Hospital",
+    subtitle: "Cedarcare Hospital",
+    description: "Our World Class Medical Center that is at the center of providing significant healthcare reforms within Nigeria and beyond. Our services include both inpatient and outpatient care, ambulance services, specialist consultation and public health education.",
+    color: "hsl(195, 35%, 30%)",
+    accent: "hsl(175, 50%, 45%)",
+    features: ["Inpatient & Outpatient Care", "Ambulance Services", "Specialist Consultation", "Public Health Education"]
   },
   {
-    icon: Package,
-    title: "CedarCare Health Supplies",
-    description: "Quality pharmaceutical products and medical equipment sourced from trusted global manufacturers, ensuring the highest standards of care.",
-    features: ["Pharmaceuticals", "Medical Equipment", "Laboratory Supplies", "Healthcare Products"],
-    image: healthSupplies,
-    color: "hsl(210, 50%, 45%)",
-    link: "#health-supplies"
+    icon: Pill,
+    title: "Health Supplies",
+    subtitle: "Cedarcare Health Supplies",
+    description: "We supply healthcare products including hospital and laboratory equipments with the latest technology, medical devices, and consumables at competitive prices. We offer very high quality products which are sourced from the USA, UK and Germany.",
+    color: "hsl(40, 70%, 50%)",
+    accent: "hsl(35, 80%, 55%)",
+    features: ["Hospital Equipment", "Laboratory Equipment", "Medical Devices", "Quality Consumables"]
   },
   {
     icon: Users,
-    title: "CedarCare Recruitment",
-    description: "Connecting healthcare facilities with qualified medical professionals. We source, vet, and place top talent in hospitals across Nigeria and internationally.",
-    features: ["Doctor Placement", "Nursing Staff", "Allied Health", "Healthcare Management"],
-    image: recruitment,
-    color: "hsl(40, 70%, 50%)",
-    link: "#recruitment"
-  }
+    title: "Recruitment",
+    subtitle: "Cedarcare Health Recruitment",
+    description: "Cedarcare Recruitment is a leading national and international provider of healthcare staffing. We are unique in our commitment to delivering the highest quality service through placing the best people in healthcare providers across the country.",
+    color: "hsl(175, 50%, 40%)",
+    accent: "hsl(195, 35%, 30%)",
+    features: ["National Placement", "International Staffing", "Quality Candidates", "Healthcare Specialists"]
+  },
 ];
 
 const ServicesSection = () => {
   return (
     <section id="services" className="py-24 md:py-32 bg-background relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-1/2 right-0 w-1/2 h-1/2 opacity-5 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-primary" />
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.03] pointer-events-none">
+        <div 
+          className="absolute top-1/4 right-0 w-[600px] h-[600px] rounded-full"
+          style={{ 
+            background: "radial-gradient(circle, hsl(175, 50%, 45%) 0%, transparent 70%)"
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-20"
-        >
-          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6">
-            <span className="text-sm text-primary font-medium">Our Divisions</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Three Pillars of{" "}
-            <span className="text-[hsl(175,50%,45%)]">Healthcare Excellence</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            CedarCare Group operates across three integrated divisions, each committed to 
-            transforming healthcare delivery and improving patient outcomes.
-          </p>
-        </motion.div>
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6"
+          >
+            <span className="text-sm text-primary font-medium">Our Services</span>
+          </motion.div>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
+          >
+            Comprehensive Healthcare{" "}
+            <span className="text-[hsl(175,50%,45%)]">Solutions</span>
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg text-muted-foreground"
+          >
+            Our group comprises of Cedarcare Hospital, Cedarcare Health Recruitment and Cedarcare Health Supplies, all working together to transform healthcare.
+          </motion.p>
+        </div>
 
-        {/* Services Cards */}
-        <div className="space-y-20">
+        {/* Services Grid */}
+        <div className="grid lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 * index }}
-              className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
-                index % 2 === 1 ? "lg:grid-flow-dense" : ""
-              }`}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className="group relative"
             >
-              {/* Image */}
-              <div className={`relative ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                <div className="relative rounded-3xl overflow-hidden aspect-[4/3] group">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              <div className="relative h-full bg-card rounded-3xl border border-border/50 p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                {/* Hover gradient */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: `linear-gradient(135deg, ${service.color}05 0%, transparent 100%)`
+                  }}
+                />
+
+                {/* Icon */}
+                <div 
+                  className="relative w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                  style={{ backgroundColor: `${service.color}15` }}
+                >
+                  <service.icon 
+                    className="w-8 h-8" 
+                    style={{ color: service.color }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  
-                  {/* Floating badge */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    className="absolute bottom-6 left-6 right-6"
-                  >
-                    <div className="bg-white/95 backdrop-blur rounded-2xl p-4 shadow-xl">
-                      <div className="flex items-center space-x-3">
-                        <div 
-                          className="w-12 h-12 rounded-xl flex items-center justify-center"
-                          style={{ backgroundColor: `${service.color}20` }}
-                        >
-                          <service.icon 
-                            className="w-6 h-6" 
-                            style={{ color: service.color }}
-                          />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-foreground">{service.title}</div>
-                          <div className="text-sm text-muted-foreground">Learn more →</div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
                 </div>
 
-                {/* Decorative accent */}
-                <div 
-                  className="absolute -z-10 top-4 -right-4 w-full h-full rounded-3xl"
-                  style={{ backgroundColor: `${service.color}15` }}
-                />
-              </div>
-
-              {/* Content */}
-              <div className={index % 2 === 1 ? "lg:col-start-1" : ""}>
-                <motion.div
-                  initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <div 
-                    className="inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-4"
-                    style={{ backgroundColor: `${service.color}15` }}
-                  >
-                    <service.icon className="w-4 h-4" style={{ color: service.color }} />
-                    <span className="text-sm font-medium" style={{ color: service.color }}>
-                      Division {index + 1}
-                    </span>
-                  </div>
-
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                {/* Content */}
+                <div className="relative">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
                     {service.title}
                   </h3>
-
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-sm font-medium mb-4" style={{ color: service.accent }}>
+                    {service.subtitle}
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     {service.description}
                   </p>
 
-                  <div className="grid grid-cols-2 gap-3 mb-8">
+                  {/* Features */}
+                  <ul className="space-y-2 mb-8">
                     {service.features.map((feature) => (
-                      <div key={feature} className="flex items-center space-x-2">
-                        <div 
-                          className="w-5 h-5 rounded-full flex items-center justify-center"
-                          style={{ backgroundColor: `${service.color}20` }}
-                        >
-                          <div 
-                            className="w-2 h-2 rounded-full"
-                            style={{ backgroundColor: service.color }}
-                          />
-                        </div>
-                        <span className="text-sm text-foreground">{feature}</span>
-                      </div>
+                      <li key={feature} className="flex items-center text-sm text-muted-foreground">
+                        <span 
+                          className="w-1.5 h-1.5 rounded-full mr-3"
+                          style={{ backgroundColor: service.accent }}
+                        />
+                        {feature}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
 
+                  {/* CTA */}
                   <Button
-                    className="rounded-full px-6 group"
-                    style={{ 
-                      backgroundColor: service.color,
-                      color: "white"
-                    }}
+                    variant="ghost"
+                    className="p-0 h-auto font-medium group/btn"
+                    style={{ color: service.color }}
                   >
                     Learn More
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
                   </Button>
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           ))}
