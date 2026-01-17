@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import cedarcarelogo from "@/assets/cedarcare-logo.png";
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -11,11 +12,11 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsExiting(true);
-    }, 2800);
+    }, 4500);
 
     const exitTimer = setTimeout(() => {
       onComplete();
-    }, 3500);
+    }, 5500);
 
     return () => {
       clearTimeout(timer);
@@ -71,64 +72,46 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ 
-                duration: 1,
+                duration: 1.2,
                 ease: [0.34, 1.56, 0.64, 1],
-                delay: 0.2
+                delay: 0.3
               }}
               className="mb-8"
             >
               <div className="relative inline-flex items-center justify-center">
                 {/* Outer ring */}
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8, duration: 0.5 }}
-                  className="absolute w-32 h-32 rounded-full border-2 border-white/10"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1, duration: 0.8 }}
+                  className="absolute w-40 h-40 rounded-full border-2 border-white/10"
                 />
                 
                 {/* Inner glow */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
-                  className="absolute w-24 h-24 rounded-full"
+                  transition={{ delay: 0.8, duration: 1 }}
+                  className="absolute w-32 h-32 rounded-full"
                   style={{ 
-                    background: "radial-gradient(circle, hsla(175, 50%, 45%, 0.3) 0%, transparent 70%)",
-                    filter: "blur(8px)"
+                    background: "radial-gradient(circle, hsla(175, 50%, 45%, 0.4) 0%, transparent 70%)",
+                    filter: "blur(12px)"
                   }}
                 />
                 
-                {/* CC Logo */}
+                {/* Logo Image */}
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6, duration: 0.5 }}
-                  className="relative w-20 h-20 flex items-center justify-center"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                  className="relative w-28 h-28 flex items-center justify-center"
                 >
-                  <svg viewBox="0 0 80 80" className="w-full h-full">
-                    {/* First C */}
-                    <motion.path
-                      d="M35 20 C20 20 10 32 10 40 C10 48 20 60 35 60 C42 60 48 57 52 53"
-                      fill="none"
-                      stroke="white"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 1.2, delay: 0.8, ease: "easeInOut" }}
-                    />
-                    {/* Second C (interlinked) */}
-                    <motion.path
-                      d="M55 20 C40 20 30 32 30 40 C30 48 40 60 55 60 C62 60 68 57 72 53"
-                      fill="none"
-                      stroke="hsl(175, 50%, 50%)"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 1.2, delay: 1, ease: "easeInOut" }}
-                    />
-                  </svg>
+                  <img 
+                    src={cedarcarelogo} 
+                    alt="Cedarcare Logo" 
+                    className="w-full h-full object-contain"
+                    style={{ filter: "brightness(0) invert(1)" }}
+                  />
                 </motion.div>
               </div>
             </motion.div>
@@ -137,7 +120,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
+              transition={{ delay: 2, duration: 1, ease: "easeOut" }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">
                 The <span className="text-[hsl(175,50%,50%)]">Cedarcare</span> Group
@@ -145,7 +128,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
-                transition={{ delay: 2, duration: 0.8, ease: "easeInOut" }}
+                transition={{ delay: 2.8, duration: 1, ease: "easeInOut" }}
                 className="h-0.5 bg-gradient-to-r from-transparent via-[hsl(40,70%,50%)] to-transparent mx-auto max-w-xs"
               />
             </motion.div>
@@ -154,7 +137,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.8 }}
-              transition={{ delay: 2.3, duration: 0.6 }}
+              transition={{ delay: 3.2, duration: 0.8 }}
               className="mt-6 text-white/70 text-lg tracking-widest uppercase"
               style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '0.25em' }}
             >
@@ -165,7 +148,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2.5, duration: 0.4 }}
+              transition={{ delay: 3.6, duration: 0.5 }}
               className="mt-12 flex justify-center"
             >
               <div className="flex space-x-2">
