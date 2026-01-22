@@ -11,31 +11,31 @@ import hospitalBuilding from "@/assets/hospital-building.jpg";
 const slides = [
   {
     image: heroDoctors,
-    title: "World-Class Medical Team",
-    subtitle: "Expert physicians dedicated to your health"
+    headline: "Caring With Excellence. Healing With Compassion.",
+    subtitle: "Experience world-class healthcare with our dedicated team"
   },
   {
     image: ctScan,
-    title: "Advanced Technology",
-    subtitle: "State-of-the-art diagnostic equipment"
+    headline: "Modern Diagnostics & Treatment",
+    subtitle: "State-of-the-art equipment for accurate diagnosis"
   },
   {
     image: doctorPatient,
-    title: "Compassionate Care",
-    subtitle: "Personalized attention for every patient"
+    headline: "Patient-Centered Healthcare",
+    subtitle: "Every decision focused on improving patient outcomes"
   },
   {
     image: hospitalBuilding,
-    title: "Modern Facilities",
-    subtitle: "Premium healthcare infrastructure"
+    headline: "Trusted by Families & HMOs",
+    subtitle: "Multiple locations serving communities across Lagos"
   }
 ];
 
 const stats = [
-  { value: "25+", label: "Years Experience" },
-  { value: "50+", label: "Specialist Doctors" },
-  { value: "15K+", label: "Patients Yearly" },
-  { value: "3", label: "Business Divisions" },
+  { value: "24/7", label: "Emergency Care" },
+  { value: "2", label: "Locations" },
+  { value: "HMOs", label: "Accepted" },
+  { value: "Modern", label: "Diagnostics" },
 ];
 
 const HeroSection = () => {
@@ -66,7 +66,7 @@ const HeroSection = () => {
           >
             <img
               src={slides[currentSlide].image}
-              alt={slides[currentSlide].title}
+              alt={slides[currentSlide].headline}
               className="w-full h-full object-cover"
             />
             {/* Gradient Overlay */}
@@ -118,29 +118,29 @@ const HeroSection = () => {
             <span className="text-sm text-white/90 font-medium">Excellence in Healthcare</span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight"
-          >
-            Welcome to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(175,50%,50%)] to-[hsl(40,70%,55%)]">
-              CedarCare
-            </span>{" "}
-            Group
-          </motion.h1>
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={currentSlide}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
+            >
+              {slides[currentSlide].headline}
+            </motion.h1>
+          </AnimatePresence>
 
           <AnimatePresence mode="wait">
             <motion.p
-              key={currentSlide}
+              key={`sub-${currentSlide}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl md:text-2xl text-[hsl(40,70%,55%)] font-medium mb-4"
             >
-              {slides[currentSlide].title}
+              {slides[currentSlide].subtitle}
             </motion.p>
           </AnimatePresence>
 
@@ -150,8 +150,8 @@ const HeroSection = () => {
             transition={{ delay: 0.5 }}
             className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl leading-relaxed"
           >
-            Our world class medical centre is at the centre of providing significant healthcare reforms
-            within Nigeria and beyond. Experience premium healthcare services.
+            Cedarcare Hospital is a modern healthcare facility committed to providing safe, reliable, 
+            and compassionate medical services. We combine clinical excellence with advanced technology.
           </motion.p>
 
           <motion.div

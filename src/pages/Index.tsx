@@ -2,6 +2,7 @@ import { useState } from "react";
 import SplashScreen from "@/components/SplashScreen";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import CTASection from "@/components/CTASection";
@@ -20,6 +21,7 @@ const Index = () => {
         <Header />
         <main>
           <HeroSection />
+          <WhyChooseUsSection />
           <ServicesSection />
           <AboutSection />
           <CTASection />
