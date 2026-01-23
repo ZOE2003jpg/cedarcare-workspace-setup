@@ -1,24 +1,25 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Twitter, Linkedin, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const footerLinks = {
   services: [
-    { name: "Hospital", href: "#hospital" },
-    { name: "Health Supplies", href: "#supplies" },
-    { name: "Health Recruitment", href: "#recruitment" },
-    { name: "Emergency Care", href: "#" },
+    { name: "Our Services", href: "/services" },
+    { name: "Our Doctors", href: "/doctors" },
+    { name: "Departments", href: "/departments" },
+    { name: "Emergency Care", href: "/contact" },
   ],
   company: [
-    { name: "About Us", href: "#" },
-    { name: "Our Team", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "News & Updates", href: "#" },
+    { name: "About Us", href: "/about" },
+    { name: "Health Resources", href: "/health-resources" },
+    { name: "Careers", href: "/careers" },
+    { name: "Contact Us", href: "/contact" },
   ],
   support: [
-    { name: "Contact Us", href: "#contact" },
-    { name: "FAQs", href: "#" },
-    { name: "Patient Portal", href: "#" },
-    { name: "Insurance Partners", href: "#" },
+    { name: "Book Appointment", href: "/contact" },
+    { name: "HMO Information", href: "/health-resources" },
+    { name: "Patient Rights", href: "/health-resources" },
+    { name: "Find a Doctor", href: "/doctors" },
   ],
 };
 
@@ -105,12 +106,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -121,12 +122,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -137,12 +138,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
