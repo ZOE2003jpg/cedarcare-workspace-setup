@@ -12,6 +12,7 @@ import HealthResources from "./pages/HealthResources";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import FloatingButtons from "./components/FloatingButtons";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <FloatingButtons />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
