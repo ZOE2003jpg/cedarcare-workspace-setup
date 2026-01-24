@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import logo from "@/assets/logo.png";
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -66,10 +67,10 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
           {/* Main content */}
           <div className="relative z-10 text-center px-8">
-            {/* Logo mark */}
+            {/* Logo */}
             <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
               transition={{ 
                 duration: 1,
                 ease: [0.34, 1.56, 0.64, 1],
@@ -83,7 +84,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.5 }}
-                  className="absolute w-32 h-32 rounded-full border-2 border-white/10"
+                  className="absolute w-48 h-48 rounded-full border-2 border-white/10"
                 />
                 
                 {/* Inner glow */}
@@ -91,45 +92,22 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
-                  className="absolute w-24 h-24 rounded-full"
+                  className="absolute w-40 h-40 rounded-full"
                   style={{ 
                     background: "radial-gradient(circle, hsla(175, 50%, 45%, 0.3) 0%, transparent 70%)",
                     filter: "blur(8px)"
                   }}
                 />
                 
-                {/* CC Logo */}
-                <motion.div
+                {/* Logo Image */}
+                <motion.img
+                  src={logo}
+                  alt="Cedarcare Hospital"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
-                  className="relative w-20 h-20 flex items-center justify-center"
-                >
-                  <svg viewBox="0 0 80 80" className="w-full h-full">
-                    {/* First C */}
-                    <motion.path
-                      d="M35 20 C20 20 10 32 10 40 C10 48 20 60 35 60 C42 60 48 57 52 53"
-                      fill="none"
-                      stroke="white"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 1.2, delay: 0.8, ease: "easeInOut" }}
-                    />
-                    {/* Second C (interlinked) */}
-                    <motion.path
-                      d="M55 20 C40 20 30 32 30 40 C30 48 40 60 55 60 C62 60 68 57 72 53"
-                      fill="none"
-                      stroke="hsl(175, 50%, 50%)"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 1.2, delay: 1, ease: "easeInOut" }}
-                    />
-                  </svg>
-                </motion.div>
+                  className="relative w-64 h-auto max-w-[280px] bg-white rounded-xl p-4"
+                />
               </div>
             </motion.div>
 
