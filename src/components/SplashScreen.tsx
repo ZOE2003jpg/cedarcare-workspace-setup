@@ -106,7 +106,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
-                  className="relative w-64 h-auto max-w-[280px] bg-white rounded-xl p-4"
+                  className="relative w-64 h-auto max-w-[280px] brightness-0 invert"
                 />
               </div>
             </motion.div>
