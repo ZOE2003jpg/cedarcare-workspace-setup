@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Twitter, Linkedin, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import logo from "@/assets/logo.png";
 const footerLinks = {
   services: [
     { name: "Our Services", href: "/services" },
@@ -55,28 +55,11 @@ const Footer = () => {
               className="inline-flex items-center space-x-3 mb-6"
               whileHover={{ scale: 1.02 }}
             >
-              {/* Logo */}
-              <div className="w-12 h-12 flex items-center justify-center">
-                <svg viewBox="0 0 80 80" className="w-full h-full">
-                  <path
-                    d="M35 18 C18 18 8 31 8 40 C8 49 18 62 35 62 C43 62 50 58 54 54"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="5"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M55 18 C38 18 28 31 28 40 C28 49 38 62 55 62 C63 62 70 58 74 54"
-                    fill="none"
-                    stroke="hsl(175, 50%, 45%)"
-                    strokeWidth="5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </div>
-              <span className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-                The Cedarcare Group
-              </span>
+              <img 
+                src={logo} 
+                alt="Cedarcare Hospital" 
+                className="h-14 w-auto"
+              />
             </motion.a>
 
             <p className="text-white/60 leading-relaxed mb-6 max-w-sm">
