@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Search, Phone, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -39,8 +40,8 @@ const Header = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-lg py-3"
-            : "bg-transparent py-5"
+            ? "bg-white/95 backdrop-blur-xl shadow-lg py-2"
+            : "bg-transparent py-4"
         }`}
       >
         <div className="container mx-auto px-4 md:px-8">
@@ -48,40 +49,17 @@ const Header = () => {
             {/* Logo */}
             <Link to="/">
               <motion.div
-                className="relative z-50 flex items-center space-x-3 group"
+                className="relative z-50 flex items-center group"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {/* CC Logo */}
-                <div className="relative w-12 h-12 flex items-center justify-center">
-                  <svg viewBox="0 0 80 80" className="w-full h-full">
-                    <path
-                      d="M35 18 C18 18 8 31 8 40 C8 49 18 62 35 62 C43 62 50 58 54 54"
-                      fill="none"
-                      stroke={isScrolled ? "hsl(195, 35%, 30%)" : "white"}
-                      strokeWidth="5"
-                      strokeLinecap="round"
-                      className="transition-colors duration-500"
-                    />
-                    <path
-                      d="M55 18 C38 18 28 31 28 40 C28 49 38 62 55 62 C63 62 70 58 74 54"
-                      fill="none"
-                      stroke="hsl(175, 50%, 45%)"
-                      strokeWidth="5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <span
-                    className={`text-xl md:text-2xl font-bold tracking-tight transition-colors duration-500 ${
-                      isScrolled ? "text-primary" : "text-white"
-                    }`}
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
-                    Cedarcare Hospital
-                  </span>
-                </div>
+                <img
+                  src={logo}
+                  alt="Cedarcare Hospital"
+                  className={`h-10 md:h-12 w-auto transition-all duration-500 ${
+                    isScrolled ? "" : "brightness-0 invert"
+                  }`}
+                />
               </motion.div>
             </Link>
 
