@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Heart, Award, Shield, Users, Star, Eye, Target, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LeadershipSection from "@/components/LeadershipSection";
 
 import doctorPatient from "@/assets/doctor-patient.jpg";
 import ctScan from "@/assets/ct-scan.jpg";
@@ -214,6 +215,9 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Leadership Section */}
+      <LeadershipSection />
 
       {/* CTA Section */}
       <section className="py-20 bg-primary">
