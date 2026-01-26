@@ -52,7 +52,7 @@ const HeroSection = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-0">
       {/* Background Carousel */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -91,31 +91,31 @@ const HeroSection = () => {
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-32 md:bottom-40 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+      <div className="absolute bottom-28 md:bottom-40 left-1/2 -translate-x-1/2 z-20 flex space-x-2 md:space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
+            className={`h-1.5 md:h-2 rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? "w-8 bg-[hsl(40,70%,50%)]" 
-                : "w-2 bg-white/40 hover:bg-white/60"
+                ? "w-6 md:w-8 bg-[hsl(40,70%,50%)]" 
+                : "w-1.5 md:w-2 bg-white/40 hover:bg-white/60"
             }`}
           />
         ))}
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 md:px-8 relative z-10 pt-20">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 pt-8 md:pt-20 pb-32 md:pb-40">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
+            className="inline-flex items-center space-x-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4 md:mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-[hsl(40,70%,50%)] animate-pulse" />
-            <span className="text-sm text-white/90 font-medium">Excellence in Healthcare</span>
+            <span className="text-xs md:text-sm text-white/90 font-medium">Excellence in Healthcare</span>
           </motion.div>
 
           <AnimatePresence mode="wait">
@@ -125,7 +125,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-2 md:mb-4 leading-tight"
             >
               {slides[currentSlide].headline}
             </motion.h1>
@@ -138,7 +138,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-xl md:text-2xl text-[hsl(40,70%,55%)] font-medium mb-4"
+              className="text-base md:text-xl lg:text-2xl text-[hsl(40,70%,55%)] font-medium mb-2 md:mb-4"
             >
               {slides[currentSlide].subtitle}
             </motion.p>
@@ -148,7 +148,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl leading-relaxed"
+            className="text-sm md:text-lg lg:text-xl text-white/70 mb-6 md:mb-10 max-w-2xl leading-relaxed hidden sm:block"
           >
             Cedarcare Hospital is a modern healthcare facility committed to providing safe, reliable, 
             and compassionate medical services. We combine clinical excellence with advanced technology.
@@ -158,19 +158,19 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4"
           >
             <Button
               size="lg"
-              className="bg-[hsl(175,50%,40%)] hover:bg-[hsl(175,50%,35%)] text-white px-8 py-6 rounded-full text-base font-semibold group"
+              className="bg-[hsl(175,50%,40%)] hover:bg-[hsl(175,50%,35%)] text-white px-6 md:px-8 py-4 md:py-6 rounded-full text-sm md:text-base font-semibold group"
             >
               Book Appointment
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 px-8 py-6 rounded-full text-base font-semibold"
+              className="border-white/30 text-white hover:bg-white/10 px-6 md:px-8 py-4 md:py-6 rounded-full text-sm md:text-base font-semibold"
             >
               Our Services
             </Button>
