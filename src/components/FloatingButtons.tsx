@@ -75,7 +75,7 @@ const FloatingButtons = () => {
       {/* Pulse animation on main button when collapsed */}
       {!isExpanded && (
         <motion.div
-          className="absolute bottom-0 right-0 w-14 h-14 rounded-full bg-primary"
+          className="absolute bottom-0 right-0 w-14 h-14 rounded-full bg-primary pointer-events-none"
           animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
           transition={{ duration: 2, repeat: Infinity }}
         />
