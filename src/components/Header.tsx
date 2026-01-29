@@ -12,10 +12,10 @@ const navItems = [
   { name: "Our Doctors", href: "/doctors" },
   { name: "Departments", href: "/departments" },
   { name: "Health Resources", href: "/health-resources" },
-  { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "https://www.cedarcaregroup.com/hospital/category/blog/", external: true },
   { name: "Careers", href: "/careers" },
   { name: "Contact Us", href: "/contact" },
-];
+] as const;
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,25 +71,41 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index, duration: 0.4 }}
                 >
-                  <Link
-                    to={item.href}
-                    className={`relative px-4 py-2.5 text-sm font-medium transition-colors duration-300 group ${
-                      isActive(item.href)
-                        ? isScrolled
-                          ? "text-primary"
-                          : "text-white"
-                        : isScrolled
-                        ? "text-foreground/80 hover:text-primary"
-                        : "text-white/90 hover:text-white"
-                    }`}
-                  >
-                    {item.name}
-                    <span
-                      className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(175,50%,45%)] transition-all duration-300 ${
-                        isActive(item.href) ? "w-3/4" : "w-0 group-hover:w-3/4"
+                  {'external' in item && item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`relative px-4 py-2.5 text-sm font-medium transition-colors duration-300 group ${
+                        isScrolled
+                          ? "text-foreground/80 hover:text-primary"
+                          : "text-white/90 hover:text-white"
                       }`}
-                    />
-                  </Link>
+                    >
+                      {item.name}
+                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(175,50%,45%)] transition-all duration-300 w-0 group-hover:w-3/4" />
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`relative px-4 py-2.5 text-sm font-medium transition-colors duration-300 group ${
+                        isActive(item.href)
+                          ? isScrolled
+                            ? "text-primary"
+                            : "text-white"
+                          : isScrolled
+                          ? "text-foreground/80 hover:text-primary"
+                          : "text-white/90 hover:text-white"
+                      }`}
+                    >
+                      {item.name}
+                      <span
+                        className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(175,50%,45%)] transition-all duration-300 ${
+                          isActive(item.href) ? "w-3/4" : "w-0 group-hover:w-3/4"
+                        }`}
+                      />
+                    </Link>
+                  )}
                 </motion.div>
               ))}
             </nav>
@@ -189,18 +205,31 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 * index }}
                   >
-                    <Link
-                      to={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`flex items-center justify-between py-4 text-lg border-b border-white/10 transition-colors group ${
-                        isActive(item.href)
-                          ? "text-[hsl(175,50%,45%)]"
-                          : "text-white/90 hover:text-white"
-                      }`}
-                    >
-                      <span>{item.name}</span>
-                      <ChevronRight className="w-5 h-5 text-[hsl(175,50%,45%)] group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    {'external' in item && item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="flex items-center justify-between py-4 text-lg border-b border-white/10 transition-colors group text-white/90 hover:text-white"
+                      >
+                        <span>{item.name}</span>
+                        <ChevronRight className="w-5 h-5 text-[hsl(175,50%,45%)] group-hover:translate-x-1 transition-transform" />
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`flex items-center justify-between py-4 text-lg border-b border-white/10 transition-colors group ${
+                          isActive(item.href)
+                            ? "text-[hsl(175,50%,45%)]"
+                            : "text-white/90 hover:text-white"
+                        }`}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronRight className="w-5 h-5 text-[hsl(175,50%,45%)] group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    )}
                   </motion.div>
                 ))}
               </div>
