@@ -4,13 +4,13 @@ import hospitalDirector from "@/assets/hospital-director.jpg";
 
 const leadership = [
   {
-    name: "Dr. [Name]",
-    title: "Medical Director",
+    name: "Kalu Olua",
+    title: "Managing Director",
     description: "Leading our medical team with excellence and dedication to patient care.",
     image: medicalDirector,
   },
   {
-    name: "[Name]",
+    name: "Kemi Olua",
     title: "Hospital Director",
     description: "Overseeing hospital operations and ensuring the highest standards of healthcare delivery.",
     image: hospitalDirector,
@@ -31,7 +31,7 @@ const LeadershipSection = () => {
             <span className="text-sm text-primary font-medium">Our Leadership</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Meet Our <span className="text-[hsl(175,50%,45%)]">Directors</span>
+            Meet Our <span className="text-[hsl(175,50%,45%)]">Leadership</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Dedicated leaders committed to excellence in healthcare delivery
