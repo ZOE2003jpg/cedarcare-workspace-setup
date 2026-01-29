@@ -79,13 +79,13 @@ const HeroSection = () => {
       {/* Carousel Navigation */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-primary/30 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-primary/50 transition-colors"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-primary/30 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-primary/50 transition-colors"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
@@ -99,7 +99,7 @@ const HeroSection = () => {
             className={`h-1.5 md:h-2 rounded-full transition-all duration-300 ${
               index === currentSlide 
                 ? "w-6 md:w-8 bg-[hsl(40,70%,50%)]" 
-                : "w-1.5 md:w-2 bg-white/40 hover:bg-white/60"
+                : "w-1.5 md:w-2 bg-white/40 hover:bg-[hsl(40,70%,50%)]/60"
             }`}
           />
         ))}

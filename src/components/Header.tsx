@@ -12,6 +12,7 @@ const navItems = [
   { name: "Our Doctors", href: "/doctors" },
   { name: "Departments", href: "/departments" },
   { name: "Health Resources", href: "/health-resources" },
+  { name: "Blog", href: "/blog" },
   { name: "Careers", href: "/careers" },
   { name: "Contact Us", href: "/contact" },
 ];
