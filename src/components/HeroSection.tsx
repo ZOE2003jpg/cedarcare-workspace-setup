@@ -58,7 +58,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-0">
       {/* Background Carousel */}
-      <div className="absolute inset-0 bg-[hsl(210,50%,10%)]">
+      <div className="absolute inset-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={safeCurrentSlide}
@@ -71,7 +71,7 @@ const HeroSection = () => {
             <img
               src={slides[safeCurrentSlide].image}
               alt={slides[safeCurrentSlide].headline}
-              className="w-full h-full object-contain md:object-cover object-center"
+              className="w-full h-full object-cover object-top md:object-center"
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/70 to-transparent" />
