@@ -7,8 +7,16 @@ import heroDoctors from "@/assets/hero-doctors.jpg";
 import ctScan from "@/assets/ct-scan.jpg";
 import doctorPatient from "@/assets/doctor-patient.jpg";
 import hospitalBuilding from "@/assets/hospital-building.jpg";
+import cedarcareReception from "@/assets/cedarcare-reception.jpg";
+import cedarcareLabTechnician from "@/assets/cedarcare-lab-technician.jpg";
+import cedarcareMicroscopy from "@/assets/cedarcare-microscopy.jpg";
 
 const slides = [
+  {
+    image: cedarcareReception,
+    headline: "Welcome to CedarCare Hospital",
+    subtitle: "Where professional care meets warm hospitality"
+  },
   {
     image: heroDoctors,
     headline: "Caring With Excellence. Healing With Compassion.",
@@ -20,9 +28,19 @@ const slides = [
     subtitle: "State-of-the-art equipment for accurate diagnosis"
   },
   {
+    image: cedarcareLabTechnician,
+    headline: "Advanced Laboratory Services",
+    subtitle: "Precision testing with cutting-edge technology"
+  },
+  {
     image: doctorPatient,
     headline: "Patient-Centered Healthcare",
     subtitle: "Every decision focused on improving patient outcomes"
+  },
+  {
+    image: cedarcareMicroscopy,
+    headline: "Expert Medical Analysis",
+    subtitle: "Detailed diagnostics for accurate treatment plans"
   },
   {
     image: hospitalBuilding,
