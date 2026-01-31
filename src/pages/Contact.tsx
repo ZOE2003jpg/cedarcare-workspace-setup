@@ -18,7 +18,7 @@ const locations = [
   {
     name: "Agungi Branch - Lekki",
     address: "123 Agungi Road, Lekki, Lagos, Nigeria",
-    phone: "+234 812 345 6789",
+    phone: "+234 706 264 1810",
     email: "agungi@cedarcaregroup.com",
     hours: "Mon - Sat: 8:00 AM - 8:00 PM",
     emergency: "24/7 Emergency Services",
@@ -27,7 +27,7 @@ const locations = [
   {
     name: "Ogombo Branch",
     address: "45 Ogombo Road, Ajah, Lagos, Nigeria",
-    phone: "+234 809 876 5432",
+    phone: "+234 909 000 3798",
     email: "ogombo@cedarcaregroup.com",
     hours: "Mon - Sat: 8:00 AM - 6:00 PM",
     emergency: "24/7 Emergency Services",
