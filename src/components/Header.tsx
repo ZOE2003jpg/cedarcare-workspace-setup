@@ -147,16 +147,14 @@ const Header = () => {
               </motion.div>
 
               {/* Mobile Menu Toggle */}
-              <motion.button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={`xl:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 ${
                   isMobileMenuOpen
                     ? "bg-white/10 text-white"
                     : isScrolled
                     ? "bg-secondary text-primary"
-                    : "bg-white/10 text-white"
+                    : "bg-primary/80 text-white"
                 }`}
               >
                 {isMobileMenuOpen ? (
@@ -164,7 +162,7 @@ const Header = () => {
                 ) : (
                   <Menu className="w-5 h-5" />
                 )}
-              </motion.button>
+              </button>
             </div>
           </div>
         </div>
