@@ -16,9 +16,11 @@ interface Ripple {
 const WaterDropAnimation = () => {
   const [drops, setDrops] = useState<Drop[]>([]);
   const [ripples, setRipples] = useState<Ripple[]>([]);
+  const [dropCounter, setDropCounter] = useState(0);
 
   const createDrop = useCallback(() => {
-    const id = Date.now();
+    setDropCounter((prev) => prev + 1);
+    const id = dropCounter;
     const x = Math.random() * 80 + 10; // 10% to 90% of screen width
     setDrops((prev) => [...prev, { id, x, delay: 0 }]);
 
@@ -26,10 +28,13 @@ const WaterDropAnimation = () => {
     setTimeout(() => {
       setDrops((prev) => prev.filter((d) => d.id !== id));
     }, 3000);
-  }, []);
+  }, [dropCounter]);
+
+  const [rippleCounter, setRippleCounter] = useState(0);
 
   const handleDropComplete = useCallback((x: number) => {
-    const rippleId = Date.now();
+    setRippleCounter((prev) => prev + 1);
+    const rippleId = rippleCounter;
     const y = window.innerHeight - 50; // Near bottom of screen
     setRipples((prev) => [...prev, { id: rippleId, x, y }]);
 
@@ -37,7 +42,7 @@ const WaterDropAnimation = () => {
     setTimeout(() => {
       setRipples((prev) => prev.filter((r) => r.id !== rippleId));
     }, 1500);
-  }, []);
+  }, [rippleCounter]);
 
   useEffect(() => {
     // Create first drop after a short delay
@@ -57,7 +62,7 @@ const WaterDropAnimation = () => {
   return (
     <div 
       className="fixed inset-0 pointer-events-none overflow-hidden"
-      style={{ zIndex: 5 }}
+      style={{ zIndex: 1 }}
       aria-hidden="true"
     >
       <AnimatePresence>
