@@ -35,6 +35,16 @@ const stats = [
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Ensure currentSlide is within bounds (handles HMR when slides array changes)
+  const safeCurrentSlide = currentSlide >= slides.length ? 0 : currentSlide;
+
+  useEffect(() => {
+    // Reset if out of bounds
+    if (currentSlide >= slides.length) {
+      setCurrentSlide(0);
+    }
+  }, [currentSlide]);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -51,7 +61,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentSlide}
+            key={safeCurrentSlide}
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
@@ -59,8 +69,8 @@ const HeroSection = () => {
             className="absolute inset-0"
           >
             <img
-              src={slides[currentSlide].image}
-              alt={slides[currentSlide].headline}
+              src={slides[safeCurrentSlide].image}
+              alt={slides[safeCurrentSlide].headline}
               className="w-full h-full object-cover"
             />
             {/* Gradient Overlay */}
@@ -91,7 +101,7 @@ const HeroSection = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-1.5 md:h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide 
+              index === safeCurrentSlide 
                 ? "w-6 md:w-8 bg-[hsl(40,70%,50%)]" 
                 : "w-1.5 md:w-2 bg-white/40 hover:bg-[hsl(40,70%,50%)]/60"
             }`}
@@ -114,27 +124,27 @@ const HeroSection = () => {
 
           <AnimatePresence mode="wait">
             <motion.h1
-              key={currentSlide}
+              key={safeCurrentSlide}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.6 }}
               className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-2 md:mb-4 leading-tight"
             >
-              {slides[currentSlide].headline}
+              {slides[safeCurrentSlide].headline}
             </motion.h1>
           </AnimatePresence>
 
           <AnimatePresence mode="wait">
             <motion.p
-              key={`sub-${currentSlide}`}
+              key={`sub-${safeCurrentSlide}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-base md:text-xl lg:text-2xl text-[hsl(40,70%,55%)] font-medium mb-2 md:mb-4"
             >
-              {slides[currentSlide].subtitle}
+              {slides[safeCurrentSlide].subtitle}
             </motion.p>
           </AnimatePresence>
 
