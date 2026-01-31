@@ -15,13 +15,13 @@ const FloatingButtons = () => {
     {
       icon: Phone,
       label: "Call Now",
-      href: "tel:+2348123456789",
+      href: "tel:+2347062641810",
       color: "bg-[hsl(175,50%,45%)] hover:bg-[hsl(175,50%,40%)]",
     },
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      href: "https://wa.me/2348123456789?text=Hello%20Cedarcare%20Hospital",
+      href: "https://wa.me/2347062641810?text=Hello%20Cedarcare%20Hospital",
       color: "bg-green-500 hover:bg-green-600",
       external: true,
     },
