@@ -25,6 +25,12 @@ const slides = [
   }
 ];
 
+// Preload all carousel images on module load
+slides.forEach((slide) => {
+  const img = new Image();
+  img.src = slide.image;
+});
+
 const stats = [
   { value: "24/7", label: "Emergency Care" },
   { value: "2", label: "Locations" },
@@ -72,6 +78,8 @@ const HeroSection = () => {
               src={slides[safeCurrentSlide].image}
               alt={slides[safeCurrentSlide].headline}
               className="w-full h-full object-cover object-center"
+              loading="eager"
+              fetchPriority="high"
             />
             {/* Light gradient at bottom for text readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,50%,10%)] via-transparent to-transparent" />
@@ -178,6 +186,8 @@ const HeroSection = () => {
               src={slides[safeCurrentSlide].image}
               alt={slides[safeCurrentSlide].headline}
               className="w-full h-full object-cover object-center"
+              loading="eager"
+              fetchPriority="high"
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/70 to-transparent" />
