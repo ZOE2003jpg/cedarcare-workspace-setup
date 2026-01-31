@@ -151,7 +151,7 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={`xl:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 ${
                   isMobileMenuOpen
-                    ? "bg-white/10 text-white"
+                    ? "bg-white text-primary"
                     : isScrolled
                     ? "bg-secondary text-primary"
                     : "bg-primary/80 text-white"
