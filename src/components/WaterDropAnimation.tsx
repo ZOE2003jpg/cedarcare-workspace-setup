@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Drop {
@@ -16,11 +16,12 @@ interface Ripple {
 const WaterDropAnimation = () => {
   const [drops, setDrops] = useState<Drop[]>([]);
   const [ripples, setRipples] = useState<Ripple[]>([]);
-  const [dropCounter, setDropCounter] = useState(0);
+  const dropIdRef = useRef(0);
+  const rippleIdRef = useRef(0);
 
   const createDrop = useCallback(() => {
-    setDropCounter((prev) => prev + 1);
-    const id = dropCounter;
+    dropIdRef.current += 1;
+    const id = dropIdRef.current;
     const x = Math.random() * 80 + 10; // 10% to 90% of screen width
     setDrops((prev) => [...prev, { id, x, delay: 0 }]);
 
@@ -28,13 +29,11 @@ const WaterDropAnimation = () => {
     setTimeout(() => {
       setDrops((prev) => prev.filter((d) => d.id !== id));
     }, 3000);
-  }, [dropCounter]);
-
-  const [rippleCounter, setRippleCounter] = useState(0);
+  }, []);
 
   const handleDropComplete = useCallback((x: number) => {
-    setRippleCounter((prev) => prev + 1);
-    const rippleId = rippleCounter;
+    rippleIdRef.current += 1;
+    const rippleId = rippleIdRef.current;
     const y = window.innerHeight - 50; // Near bottom of screen
     setRipples((prev) => [...prev, { id: rippleId, x, y }]);
 
@@ -42,7 +41,7 @@ const WaterDropAnimation = () => {
     setTimeout(() => {
       setRipples((prev) => prev.filter((r) => r.id !== rippleId));
     }, 1500);
-  }, [rippleCounter]);
+  }, []);
 
   useEffect(() => {
     // Create first drop after a short delay
