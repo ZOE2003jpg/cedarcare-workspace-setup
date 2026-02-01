@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Twitter, Linkedin, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+
+// Custom X (formerly Twitter) icon
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 const footerLinks = {
   services: [
     { name: "Our Services", href: "/services" },
@@ -26,7 +33,7 @@ const footerLinks = {
 const socialLinks = [
   { icon: Facebook, href: "https://www.facebook.com/share/1AFFGhs4u8/?mibextid=wwXIfr", label: "Facebook" },
   { icon: Instagram, href: "https://www.instagram.com/cedarcarehospital?igsh=YXM2aWlvazZ2a3N4&utm_source=qr", label: "Instagram" },
-  { icon: Twitter, href: "https://x.com/_cedarcare?s=21&t=VM3cXDk5rK1XDhCT3X2F7Q", label: "Twitter" },
+  { icon: XIcon, href: "https://x.com/_cedarcare?s=21&t=VM3cXDk5rK1XDhCT3X2F7Q", label: "X" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/cedarcare-hospital/", label: "LinkedIn" },
 ];
 
