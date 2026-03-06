@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { Heart, Activity, Baby, Shield, Stethoscope, Download, BookOpen, FileText, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -80,6 +81,7 @@ const wellnessTips = [
 
 const HealthResources = () => {
   return (
+    <PageTransition>
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -273,6 +275,7 @@ const HealthResources = () => {
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
 import Footer from "@/components/Footer";
 import { Users, Award, Heart, BookOpen, Briefcase, GraduationCap, Clock, MapPin, ArrowRight, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -72,6 +73,7 @@ const currentVacancies = [
 
 const Careers = () => {
   return (
+    <PageTransition>
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -295,6 +297,7 @@ const Careers = () => {
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 

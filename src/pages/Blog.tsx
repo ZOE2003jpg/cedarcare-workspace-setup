@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowRight } from "lucide-react";
@@ -45,6 +46,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
+    <PageTransition>
     <div className="min-h-screen bg-background">
       <Header />
 
@@ -126,6 +128,7 @@ const Blog = () => {
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 

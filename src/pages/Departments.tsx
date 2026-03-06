@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { Stethoscope, Heart, Pill, Building2, Shield, ArrowRight, Phone, Mail, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -85,6 +86,7 @@ const departments = [
 
 const Departments = () => {
   return (
+    <PageTransition>
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -163,7 +165,7 @@ const Departments = () => {
                     to="/contact"
                     className="inline-flex items-center text-primary font-medium hover:gap-3 gap-2 transition-all"
                   >
-                    Contact Department <ArrowRight className="w-4 h-4" />
+                    View More <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </motion.div>
@@ -205,6 +207,7 @@ const Departments = () => {
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 
