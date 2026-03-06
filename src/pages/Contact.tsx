@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
 import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,7 @@ const locations = [
 
 const Contact = () => {
   return (
+    <PageTransition>
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -263,6 +265,7 @@ const Contact = () => {
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 
