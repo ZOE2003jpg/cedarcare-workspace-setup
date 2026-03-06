@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 import cedarcareReception from "@/assets/cedarcare-reception.jpg";
 import cedarcareLabTechnician from "@/assets/cedarcare-lab-technician.jpg";
 import cedarcareMicroscopy from "@/assets/cedarcare-microscopy.jpg";
+import cedarcareWard from "@/assets/cedarcare-ward.jpg";
+import cedarcarePharmacy from "@/assets/cedarcare-pharmacy.jpg";
 
 const slides = [
   {
@@ -22,6 +25,16 @@ const slides = [
     image: cedarcareMicroscopy,
     headline: "Expert Medical Analysis",
     subtitle: "Detailed diagnostics for accurate treatment plans"
+  },
+  {
+    image: cedarcareWard,
+    headline: "Compassionate Inpatient Care",
+    subtitle: "Round-the-clock nursing and medical attention"
+  },
+  {
+    image: cedarcarePharmacy,
+    headline: "Quality Pharmacy Services",
+    subtitle: "Safe medication dispensing with professional guidance"
   }
 ];
 
@@ -41,11 +54,9 @@ const stats = [
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Ensure currentSlide is within bounds (handles HMR when slides array changes)
   const safeCurrentSlide = currentSlide >= slides.length ? 0 : currentSlide;
 
   useEffect(() => {
-    // Reset if out of bounds
     if (currentSlide >= slides.length) {
       setCurrentSlide(0);
     }
@@ -54,7 +65,7 @@ const HeroSection = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 25000);
     return () => clearInterval(timer);
   }, []);
 
@@ -81,12 +92,10 @@ const HeroSection = () => {
               loading="eager"
               fetchPriority="high"
             />
-            {/* Light gradient at bottom for text readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,50%,10%)] via-transparent to-transparent" />
           </motion.div>
         </AnimatePresence>
         
-        {/* Mobile Carousel Navigation */}
         <button
           onClick={prevSlide}
           className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white"
@@ -100,7 +109,6 @@ const HeroSection = () => {
           <ChevronRight className="w-5 h-5" />
         </button>
         
-        {/* Mobile Slide Indicators */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
           {slides.map((_, index) => (
             <button
@@ -145,22 +153,25 @@ const HeroSection = () => {
         </AnimatePresence>
 
         <div className="flex flex-col gap-3">
-          <Button
-            size="lg"
-            className="bg-[hsl(175,50%,40%)] hover:bg-[hsl(175,50%,35%)] text-white px-6 py-4 rounded-full text-sm font-semibold group"
-          >
-            Book Appointment
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button
-            size="lg"
-            className="bg-transparent border-2 border-white/50 text-white hover:bg-white/20 hover:border-white px-6 py-4 rounded-full text-sm font-semibold"
-          >
-            Our Services
-          </Button>
+          <Link to="/services">
+            <Button
+              size="lg"
+              className="w-full bg-[hsl(175,50%,40%)] hover:bg-[hsl(175,50%,35%)] text-white px-6 py-4 rounded-full text-sm font-semibold group"
+            >
+              Our Services
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+          <Link to="/contact">
+            <Button
+              size="lg"
+              className="w-full bg-transparent border-2 border-white/50 text-white hover:bg-white/20 hover:border-white px-6 py-4 rounded-full text-sm font-semibold"
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
 
-        {/* Mobile Stats */}
         <div className="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-white/10">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
@@ -189,7 +200,6 @@ const HeroSection = () => {
               loading="eager"
               fetchPriority="high"
             />
-            {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/70 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,50%,10%)]/80 via-transparent to-[hsl(210,50%,10%)]/30" />
           </motion.div>
@@ -235,7 +245,7 @@ const HeroSection = () => {
             className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-[hsl(40,70%,50%)] animate-pulse" />
-            <span className="text-sm text-white/90 font-medium">Excellence in Healthcare</span>
+            <span className="text-sm text-white/90 font-medium">Trusted with Compassionate Care Since 2019</span>
           </motion.div>
 
           <AnimatePresence mode="wait">
@@ -280,19 +290,23 @@ const HeroSection = () => {
             transition={{ delay: 0.6 }}
             className="flex flex-row gap-4"
           >
-            <Button
-              size="lg"
-              className="bg-[hsl(175,50%,40%)] hover:bg-[hsl(175,50%,35%)] text-white px-8 py-6 rounded-full text-base font-semibold group"
-            >
-              Book Appointment
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              className="bg-transparent border-2 border-white/50 text-white hover:bg-white/20 hover:border-white px-8 py-6 rounded-full text-base font-semibold"
-            >
-              Our Services
-            </Button>
+            <Link to="/services">
+              <Button
+                size="lg"
+                className="bg-[hsl(175,50%,40%)] hover:bg-[hsl(175,50%,35%)] text-white px-8 py-6 rounded-full text-base font-semibold group"
+              >
+                Our Services
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button
+                size="lg"
+                className="bg-transparent border-2 border-white/50 text-white hover:bg-white/20 hover:border-white px-8 py-6 rounded-full text-base font-semibold"
+              >
+                Contact Us
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>

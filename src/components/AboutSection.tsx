@@ -1,36 +1,27 @@
 import { motion } from "framer-motion";
-import { Heart, Award, Shield, Users, Star, Eye, Target } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Heart, Award, Shield, Users, Star, Zap, Eye, Target } from "lucide-react";
 
-import doctorPatient from "@/assets/doctor-patient.jpg";
-import ctScan from "@/assets/ct-scan.jpg";
+import doctorPatientNew from "@/assets/doctor-patient-new.jpg";
 
 const coreValues = [
-  { icon: Heart, title: "Compassion", description: "Treating every patient with empathy and kindness" },
-  { icon: Award, title: "Excellence", description: "Maintaining the highest standards in medical care" },
-  { icon: Shield, title: "Integrity", description: "Honest, ethical practice in everything we do" },
-  { icon: Users, title: "Accountability", description: "Taking responsibility for patient outcomes" },
-  { icon: Star, title: "Faith & Service", description: "Healthcare rooted in purpose and dedication" },
-];
-
-const missionPoints = [
-  "Skilled professionals dedicated to your care",
-  "Modern medical technology for accurate diagnosis",
-  "Ethical practice in all our services",
-  "A culture of continuous improvement",
+  { icon: Shield, title: "TRUSTED", description: "We are professional and responsible for our actions. We can be trusted to give the best care using the latest technologies." },
+  { icon: Users, title: "WORKING TOGETHER", description: "We work together as a team to make a difference in our patients and local communities. We find creative ways to run efficiently and provide high quality service to our patients." },
+  { icon: Heart, title: "COMPASSIONATE", description: "We put our patients at the heart of everything we do. We are positive, kind, patient, tolerant and polite. We understand diversity and we are respectful. We have empathy for all our patients." },
+  { icon: Star, title: "ASPIRATIONAL", description: "We feel empowered and we empower our patients to demand the best care. We think creatively and we aspire to be the best healthcare provider." },
+  { icon: Zap, title: "RESPONSIVE", description: "We listen, we act, and we communicate clearly. We do what we say we will do. We take account of the opinions of others. We are open and transparent about our patient care." },
+  { icon: Award, title: "EXCELLENT", description: "We strive to deliver the best care we can. We have a culture of excellence in our teams. We challenge complacency, we listen and learn to continually improve our knowledge and skills to deliver an excellent service." },
 ];
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 md:py-32 bg-secondary/30 relative overflow-hidden">
-      {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-1/3 h-full opacity-5 pointer-events-none">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary" />
       </div>
 
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Image/Visual */}
+          {/* Left - Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -38,10 +29,9 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            {/* Main Image */}
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5]">
               <img
-                src={doctorPatient}
+                src={doctorPatientNew}
                 alt="Doctor consulting with patient"
                 className="w-full h-full object-cover"
               />
@@ -62,27 +52,12 @@ const AboutSection = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Our Vision</h4>
                     <p className="text-sm text-muted-foreground">
-                      To be a leading healthcare institution known for clinical excellence, compassion, and integrity.
+                      Our vision is to deliver high quality services by working in partnership with our local community, creating a dynamic system of care so people receive the right help at the right time in the right setting with the right outcome.
                     </p>
                   </div>
                 </div>
               </motion.div>
             </div>
-
-            {/* Secondary Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, x: 20 }}
-              whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="absolute -bottom-8 -right-4 md:-right-8 w-40 md:w-56 aspect-square rounded-2xl overflow-hidden border-4 border-background shadow-2xl"
-            >
-              <img
-                src={ctScan}
-                alt="CT Scan machine"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
 
             {/* Gold accent badge */}
             <motion.div
@@ -131,32 +106,10 @@ const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">Our Mission</h3>
               </div>
-              <p className="text-muted-foreground mb-4">
-                To provide high-quality, affordable, and patient-centered healthcare services through:
+              <p className="text-muted-foreground">
+                To provide premium healthcare that is affordable, trusted and compassionate to all our patients.
               </p>
-              <ul className="space-y-2">
-                {missionPoints.map((point, index) => (
-                  <motion.li
-                    key={point}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 * index }}
-                    className="flex items-center gap-3"
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-[hsl(175,50%,45%)]" />
-                    <span className="text-sm text-foreground">{point}</span>
-                  </motion.li>
-                ))}
-              </ul>
             </div>
-
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-full text-base"
-            >
-              Learn More About Us
-            </Button>
           </motion.div>
         </div>
 
@@ -175,7 +128,7 @@ const AboutSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {coreValues.map((value, index) => (
             <motion.div
               key={value.title}

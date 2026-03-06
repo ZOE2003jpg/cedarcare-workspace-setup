@@ -3,13 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Search, Phone, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-transparent.png";
 
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Our Services", href: "/services" },
-  { name: "Our Doctors", href: "/doctors" },
   { name: "Departments", href: "/departments" },
   { name: "Health Resources", href: "/health-resources" },
   { name: "Blog", href: "https://www.cedarcaregroup.com/hospital/category/blog/", external: true },
@@ -134,16 +133,18 @@ const Header = () => {
                 transition={{ delay: 0.6 }}
                 className="hidden md:block"
               >
-                <Button
-                  className={`relative overflow-hidden group px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
-                    isScrolled
-                      ? "bg-primary text-primary-foreground hover:shadow-lg"
-                      : "bg-white text-primary hover:shadow-xl"
-                  }`}
-                >
-                  <Phone className="w-4 h-4 mr-2 inline" />
-                  <span>Book Appointment</span>
-                </Button>
+                <Link to="/contact">
+                  <Button
+                    className={`relative overflow-hidden group px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
+                      isScrolled
+                        ? "bg-primary text-primary-foreground hover:shadow-lg"
+                        : "bg-white text-primary hover:shadow-xl"
+                    }`}
+                  >
+                    <Phone className="w-4 h-4 mr-2 inline" />
+                    <span>Contact Us</span>
+                  </Button>
+                </Link>
               </motion.div>
 
               {/* Mobile Menu Toggle */}
@@ -178,7 +179,6 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 xl:hidden"
           >
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -187,7 +187,6 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
-            {/* Menu Content */}
             <motion.nav
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -239,10 +238,12 @@ const Header = () => {
                 transition={{ delay: 0.5 }}
                 className="mt-8"
               >
-                <Button className="w-full bg-[hsl(175,50%,45%)] hover:bg-[hsl(175,50%,40%)] text-white rounded-full py-6 text-lg">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Book Appointment
-                </Button>
+                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full bg-[hsl(175,50%,45%)] hover:bg-[hsl(175,50%,40%)] text-white rounded-full py-6 text-lg">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Contact Us
+                  </Button>
+                </Link>
               </motion.div>
 
               {/* Search */}
@@ -290,7 +291,7 @@ const Header = () => {
             >
               <input
                 type="text"
-                placeholder="Search for services, doctors, information..."
+                placeholder="Search for services, information..."
                 autoFocus
                 className="w-full px-8 py-5 bg-white rounded-2xl text-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-4 focus:ring-[hsl(175,50%,45%)]/30 shadow-2xl"
               />

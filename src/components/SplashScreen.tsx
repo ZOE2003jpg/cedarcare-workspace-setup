@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-transparent.png";
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -38,7 +38,6 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
         >
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
-            {/* Floating orbs */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 0.1, scale: 1 }}
@@ -54,7 +53,6 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               style={{ background: "radial-gradient(circle, hsl(40, 70%, 50%) 0%, transparent 70%)" }}
             />
             
-            {/* Subtle grid pattern */}
             <div 
               className="absolute inset-0 opacity-[0.03]"
               style={{
@@ -79,7 +77,6 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               className="mb-8"
             >
               <div className="relative inline-flex items-center justify-center">
-                {/* Outer ring */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -87,7 +84,6 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   className="absolute w-48 h-48 rounded-full border-2 border-white/10"
                 />
                 
-                {/* Inner glow */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -99,14 +95,13 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   }}
                 />
                 
-                {/* Logo Image */}
                 <motion.img
                   src={logo}
                   alt="Cedarcare Hospital"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
-                  className="relative w-64 h-auto max-w-[280px] bg-white rounded-xl p-4"
+                  className="relative w-64 h-auto max-w-[280px]"
                 />
               </div>
             </motion.div>
@@ -134,9 +129,9 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               animate={{ opacity: 0.8 }}
               transition={{ delay: 2.3, duration: 0.6 }}
               className="mt-6 text-white/70 text-lg tracking-widest uppercase"
-              style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '0.25em' }}
+              style={{ letterSpacing: '0.25em' }}
             >
-              World Class Healthcare
+              Trusted with Compassionate Care Since 2019
             </motion.p>
 
             {/* Loading indicator */}

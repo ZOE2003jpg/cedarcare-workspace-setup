@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
-import medicalDirector from "@/assets/medical-director.jpg";
-import hospitalDirector from "@/assets/hospital-director.jpg";
+import medicalDirectorNew from "@/assets/medical-director-new.jpg";
+import hospitalDirectorNew from "@/assets/hospital-director-new.jpg";
 
 const leadership = [
   {
     name: "Kalu Olua",
     title: "Managing Director",
     description: "Leading our medical team with excellence and dedication to patient care.",
-    image: medicalDirector,
+    image: medicalDirectorNew,
   },
   {
     name: "Kemi Olua",
     title: "Hospital Director",
     description: "Overseeing hospital operations and ensuring the highest standards of healthcare delivery.",
-    image: hospitalDirector,
+    image: hospitalDirectorNew,
   },
 ];
 
