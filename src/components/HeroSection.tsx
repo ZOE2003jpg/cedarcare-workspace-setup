@@ -13,7 +13,7 @@ import cedarcarePharmacy from "@/assets/cedarcare-pharmacy.jpg";
 const slides = [
   {
     image: cedarcareReception,
-    headline: "Welcome to CedarCare Hospital",
+    headline: "Welcome to Cedarcare Hospital",
     subtitle: "Where professional care meets warm hospitality"
   },
   {

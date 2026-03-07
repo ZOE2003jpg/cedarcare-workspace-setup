@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo-transparent.png";
+import logo from "@/assets/cedarcare-logo.png";
 
 interface SplashScreenProps {
   onComplete: () => void;
