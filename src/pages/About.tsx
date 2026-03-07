@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Heart, Award, Shield, Users, Star, Zap, Eye, Target } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import LeadershipSection from "@/components/LeadershipSection";
 import PageTransition from "@/components/PageTransition";
 
 import doctorPatientNew from "@/assets/doctor-patient-new.jpg";
@@ -179,9 +178,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
-        {/* Leadership Section */}
-        <LeadershipSection />
 
         <Footer />
       </div>

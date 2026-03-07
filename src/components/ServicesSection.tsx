@@ -9,7 +9,7 @@ import recruitment from "@/assets/recruitment.jpg";
 const services = [
   {
     icon: Building2,
-    title: "CedarCare Hospital",
+    title: "Cedarcare Hospital",
     description: "State-of-the-art medical facilities offering comprehensive healthcare services with internationally trained professionals and cutting-edge technology.",
     features: ["24/7 Emergency Care", "Advanced Diagnostics", "Specialist Consultations", "Inpatient Services"],
     image: hospitalBuilding,
@@ -18,7 +18,7 @@ const services = [
   },
   {
     icon: Package,
-    title: "CedarCare Health Supplies",
+    title: "Cedarcare Health Supplies",
     description: "Quality pharmaceutical products and medical equipment sourced from trusted global manufacturers, ensuring the highest standards of care.",
     features: ["Pharmaceuticals", "Medical Equipment", "Laboratory Supplies", "Healthcare Products"],
     image: healthSupplies,
@@ -27,7 +27,7 @@ const services = [
   },
   {
     icon: Users,
-    title: "CedarCare Recruitment",
+    title: "Cedarcare Recruitment",
     description: "Connecting healthcare facilities with qualified medical professionals. We source, vet, and place top talent in hospitals across Nigeria and internationally.",
     features: ["Doctor Placement", "Nursing Staff", "Allied Health", "Healthcare Management"],
     image: recruitment,
@@ -60,7 +60,7 @@ const ServicesSection = () => {
             <span className="text-[hsl(175,50%,45%)]">Healthcare Excellence</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            CedarCare Group operates across three integrated divisions, each committed to 
+            Cedarcare Group operates across three integrated divisions, each committed to 
             transforming healthcare delivery and improving patient outcomes.
           </p>
         </motion.div>
