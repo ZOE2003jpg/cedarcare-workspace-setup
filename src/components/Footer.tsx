@@ -62,7 +62,7 @@ const Footer = () => {
             >
               <img 
                 src={logo} 
-                alt="Cedarcare Hospital" 
+                alt="cedarcare Hospital" 
                 className="h-14 w-auto"
               />
             </motion.a>
@@ -149,7 +149,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <p className="text-white/50 text-sm">
-            © {new Date().getFullYear()} Cedarcare Group. All rights reserved.
+            © {new Date().getFullYear()} cedarcare Group. All rights reserved.
           </p>
 
           {/* Social links */}

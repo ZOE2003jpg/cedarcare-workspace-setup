@@ -55,7 +55,7 @@ const Header = () => {
               >
                 <img
                   src={logo}
-                  alt="Cedarcare Hospital"
+                  alt="cedarcare Hospital"
                   className="h-10 md:h-12 w-auto"
                 />
               </motion.div>

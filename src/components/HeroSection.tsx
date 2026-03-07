@@ -13,7 +13,7 @@ import cedarcarePharmacy from "@/assets/cedarcare-pharmacy.jpg";
 const slides = [
   {
     image: cedarcareReception,
-    headline: "Welcome to Cedarcare Hospital",
+    headline: "Welcome to cedarcare Hospital",
     subtitle: "Where professional care meets warm hospitality"
   },
   {
@@ -280,7 +280,7 @@ const HeroSection = () => {
             transition={{ delay: 0.5 }}
             className="text-lg lg:text-xl text-white/70 mb-10 max-w-2xl leading-relaxed"
           >
-            Cedarcare Hospital is a modern healthcare facility committed to providing safe, reliable, 
+            cedarcare Hospital is a modern healthcare facility committed to providing safe, reliable, 
             and compassionate medical services. We combine clinical excellence with advanced technology.
           </motion.p>
 
