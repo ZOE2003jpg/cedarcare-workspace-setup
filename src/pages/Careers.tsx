@@ -57,7 +57,7 @@ const Careers = () => {
               <span className="text-[hsl(175,50%,45%)]">Careers</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-              Join Our Team. Cedarcare Hospital is always seeking dedicated professionals passionate about patient care. Build a rewarding career with us and make a difference in healthcare.
+              Join Our Team. cedarcare Hospital is always seeking dedicated professionals passionate about patient care. Build a rewarding career with us and make a difference in healthcare.
             </p>
           </motion.div>
         </div>
@@ -76,7 +76,7 @@ const Careers = () => {
               Why Work With Us
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              At Cedarcare, we invest in our people because we know that exceptional care starts with exceptional staff.
+              At cedarcare, we invest in our people because we know that exceptional care starts with exceptional staff.
             </p>
           </motion.div>
           
