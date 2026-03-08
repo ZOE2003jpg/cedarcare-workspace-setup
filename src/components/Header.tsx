@@ -56,7 +56,11 @@ const Header = () => {
                 <img
                   src={logo}
                   alt="cedarcare Hospital"
-                  className="h-10 md:h-12 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                  className={`h-10 md:h-12 w-auto transition-all duration-500 ${
+                    isScrolled
+                      ? ""
+                      : "brightness-0 invert drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                  }`}
                 />
               </motion.div>
             </Link>
