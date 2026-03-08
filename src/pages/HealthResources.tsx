@@ -147,7 +147,7 @@ const HealthResources = () => {
                       {article.readTime}
                     </span>
                   </div>
-                  <span className="text-sm font-medium text-[hsl(175,50%,45%)]">{article.category}</span>
+                  <span className="text-sm font-medium text-[hsl(217,91%,60%)]">{article.category}</span>
                   <h3 className="text-xl font-bold text-foreground mt-2 mb-3 group-hover:text-primary transition-colors">
                     {article.title}
                   </h3>
