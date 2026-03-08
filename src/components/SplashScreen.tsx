@@ -101,7 +101,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
-                  className="relative w-64 h-auto max-w-[280px]"
+                  className="relative w-64 h-auto max-w-[280px] drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]"
                 />
               </div>
             </motion.div>
