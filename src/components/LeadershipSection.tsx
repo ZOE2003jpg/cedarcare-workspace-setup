@@ -31,7 +31,7 @@ const LeadershipSection = () => {
             <span className="text-sm text-primary font-medium">Our Leadership</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Meet Our <span className="text-[hsl(175,50%,45%)]">Leadership</span>
+            Meet Our <span className="text-[hsl(217,91%,60%)]">Leadership</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Dedicated leaders committed to excellence in healthcare delivery

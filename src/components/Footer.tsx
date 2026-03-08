@@ -171,7 +171,7 @@ const Footer = () => {
           {/* Back to top */}
           <motion.button
             onClick={scrollToTop}
-            className="flex items-center space-x-2 text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors"
+            className="flex items-center space-x-2 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors"
             whileHover={{ y: -2 }}
           >
             <span className="text-sm">Back to top</span>
