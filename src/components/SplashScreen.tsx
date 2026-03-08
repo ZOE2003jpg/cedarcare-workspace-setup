@@ -113,7 +113,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">
-                The <span className="text-[hsl(175,50%,50%)]">cedarcare</span> Group
+                The <span className="text-[hsl(217,91%,70%)]">cedarcare</span> Group
               </h1>
               <motion.div
                 initial={{ width: 0 }}
