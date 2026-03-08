@@ -73,7 +73,7 @@ const Footer = () => {
 
             {/* Contact info */}
             <div className="space-y-3">
-              <a href="mailto:info@cedarcare.com" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors">
+              <a href="mailto:info@cedarcare.com" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors">
                 <Mail className="w-4 h-4" />
                 <span>info@cedarcare.com</span>
               </a>
