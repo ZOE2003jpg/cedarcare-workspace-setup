@@ -44,7 +44,7 @@ const About = () => {
                 <span className="text-sm text-white/90 font-medium">About cedarcare Hospital</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Who We <span className="text-[hsl(175,50%,45%)]">Are</span>
+                Who We <span className="text-[hsl(217,91%,60%)]">Are</span>
               </h1>
               <p className="text-xl text-white/80 leading-relaxed">
                 Committed to delivering accessible, ethical, and high-quality medical services with compassion and integrity.
