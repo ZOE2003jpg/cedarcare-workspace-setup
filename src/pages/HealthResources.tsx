@@ -239,7 +239,7 @@ const HealthResources = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start"
                   >
-                    <div className="w-6 h-6 rounded-full bg-[hsl(175,50%,45%)] flex items-center justify-center flex-shrink-0 mt-0.5 mr-4">
+                    <div className="w-6 h-6 rounded-full bg-[hsl(217,91%,60%)] flex items-center justify-center flex-shrink-0 mt-0.5 mr-4">
                       <span className="text-white text-xs font-bold">{index + 1}</span>
                     </div>
                     <span className="text-foreground">{tip}</span>

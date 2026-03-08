@@ -107,7 +107,7 @@ const Departments = () => {
               <span className="text-sm text-white/90 font-medium">Our Specialties</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              <span className="text-[hsl(175,50%,45%)]">Departments</span>
+              <span className="text-[hsl(217,91%,60%)]">Departments</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
               Departments Overview. Explore our specialized departments providing comprehensive care across all medical disciplines, each staffed with experienced professionals dedicated to your wellbeing.

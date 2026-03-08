@@ -104,7 +104,7 @@ const Services = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
                     <div className="absolute bottom-4 left-4">
-                      <div className="w-14 h-14 rounded-xl bg-[hsl(175,50%,45%)] flex items-center justify-center shadow-lg">
+                      <div className="w-14 h-14 rounded-xl bg-[hsl(217,91%,60%)] flex items-center justify-center shadow-lg">
                         <service.icon className="w-7 h-7 text-white" />
                       </div>
                     </div>

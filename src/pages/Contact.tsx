@@ -59,7 +59,7 @@ const Contact = () => {
               <span className="text-sm text-white/90 font-medium">Get In Touch</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Contact <span className="text-[hsl(175,50%,45%)]">Us</span>
+              Contact <span className="text-[hsl(217,91%,60%)]">Us</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
               We're here to help. Reach out to us for appointments, enquiries, complaints, or feedback. Our patient care team is ready to assist you.

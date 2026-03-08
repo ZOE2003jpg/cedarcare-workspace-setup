@@ -54,7 +54,7 @@ const Careers = () => {
               <span className="text-sm text-white/90 font-medium">Join Our Team</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              <span className="text-[hsl(175,50%,45%)]">Careers</span>
+              <span className="text-[hsl(217,91%,60%)]">Careers</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
               Join Our Team. cedarcare Hospital is always seeking dedicated professionals passionate about patient care. Build a rewarding career with us and make a difference in healthcare.

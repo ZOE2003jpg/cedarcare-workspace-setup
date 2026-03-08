@@ -109,7 +109,7 @@ const Doctors = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-xl font-bold text-white mb-1">{doctor.name}</h3>
-                    <p className="text-[hsl(175,50%,55%)] font-medium">{doctor.specialty}</p>
+                    <p className="text-[hsl(217,91%,70%)] font-medium">{doctor.specialty}</p>
                   </div>
                 </div>
                 
