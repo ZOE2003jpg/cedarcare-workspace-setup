@@ -81,7 +81,7 @@ const CTASection = () => {
           >
             <Button 
               size="lg"
-              className="bg-[hsl(175,50%,45%)] hover:bg-[hsl(175,50%,40%)] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,50%)] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Calendar className="w-5 h-5 mr-2" />
               Book Appointment
