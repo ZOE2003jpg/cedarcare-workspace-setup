@@ -174,8 +174,8 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
-                    <MessageSquare className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
+                    <MessageSquare className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">WhatsApp</h4>
