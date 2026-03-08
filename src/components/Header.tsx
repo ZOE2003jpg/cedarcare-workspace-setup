@@ -228,7 +228,7 @@ const Header = () => {
                         }`}
                       >
                         <span>{item.name}</span>
-                        <ChevronRight className="w-5 h-5 text-[hsl(175,50%,45%)] group-hover:translate-x-1 transition-transform" />
+                        <ChevronRight className="w-5 h-5 text-[hsl(217,91%,60%)] group-hover:translate-x-1 transition-transform" />
                       </Link>
                     )}
                   </motion.div>
