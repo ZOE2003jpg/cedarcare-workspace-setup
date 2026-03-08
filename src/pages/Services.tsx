@@ -74,7 +74,7 @@ const Services = () => {
                 <span className="text-sm text-white/90 font-medium">What We Offer</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Our <span className="text-[hsl(175,50%,45%)]">Services</span>
+                Our <span className="text-[hsl(217,91%,60%)]">Services</span>
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
                 Comprehensive Healthcare Services at cedarcare Hospital. We offer a full spectrum of medical services designed to meet the healthcare needs of individuals, families, and communities.
