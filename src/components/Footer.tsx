@@ -63,7 +63,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="cedarcare Hospital" 
-                className="h-14 w-auto"
+                className="h-14 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
               />
             </motion.a>
 
