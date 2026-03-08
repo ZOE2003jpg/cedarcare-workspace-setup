@@ -101,8 +101,8 @@ const AboutSection = () => {
             {/* Mission Section */}
             <div className="bg-card border border-border rounded-2xl p-6 mb-8">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-[hsl(175,50%,45%)]/10 flex items-center justify-center">
-                  <Target className="w-5 h-5 text-[hsl(175,50%,45%)]" />
+                <div className="w-10 h-10 rounded-lg bg-[hsl(217,91%,60%)]/10 flex items-center justify-center">
+                  <Target className="w-5 h-5 text-[hsl(217,91%,60%)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">Our Mission</h3>
               </div>
