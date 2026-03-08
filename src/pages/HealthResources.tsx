@@ -102,7 +102,7 @@ const HealthResources = () => {
               <span className="text-sm text-white/90 font-medium">Stay Informed</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Health <span className="text-[hsl(175,50%,45%)]">Resources</span>
+              Health <span className="text-[hsl(217,91%,60%)]">Resources</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
               Educational materials and resources to help you maintain optimal health. Access expert-written articles, downloadable guides, and wellness tips.
