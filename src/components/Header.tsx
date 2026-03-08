@@ -86,7 +86,7 @@ const Header = () => {
                       }`}
                     >
                       {item.name}
-                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(175,50%,45%)] transition-all duration-300 w-0 group-hover:w-3/4" />
+                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(217,91%,60%)] transition-all duration-300 w-0 group-hover:w-3/4" />
                     </a>
                   ) : (
                     <Link
