@@ -40,8 +40,8 @@ const Careers = () => {
       {/* Hero Banner */}
       <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(175,50%,45%)] rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[hsl(175,50%,45%)] rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <motion.div
@@ -54,7 +54,7 @@ const Careers = () => {
               <span className="text-sm text-white/90 font-medium">Join Our Team</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              <span className="text-[hsl(175,50%,45%)]">Careers</span>
+              <span className="text-[hsl(217,91%,60%)]">Careers</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
               Join Our Team. cedarcare Hospital is always seeking dedicated professionals passionate about patient care. Build a rewarding career with us and make a difference in healthcare.

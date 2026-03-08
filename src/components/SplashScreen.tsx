@@ -43,7 +43,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               animate={{ opacity: 0.1, scale: 1 }}
               transition={{ duration: 2, ease: "easeOut" }}
               className="absolute -top-32 -right-32 w-96 h-96 rounded-full"
-              style={{ background: "radial-gradient(circle, hsl(175, 50%, 45%) 0%, transparent 70%)" }}
+              style={{ background: "radial-gradient(circle, hsl(217, 91%, 60%) 0%, transparent 70%)" }}
             />
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -90,7 +90,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   transition={{ delay: 0.5, duration: 0.8 }}
                   className="absolute w-40 h-40 rounded-full"
                   style={{ 
-                    background: "radial-gradient(circle, hsla(175, 50%, 45%, 0.3) 0%, transparent 70%)",
+                    background: "radial-gradient(circle, hsla(217, 91%, 60%, 0.3) 0%, transparent 70%)",
                     filter: "blur(8px)"
                   }}
                 />
@@ -101,7 +101,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
-                  className="relative w-64 h-auto max-w-[280px]"
+                  className="relative w-64 h-auto max-w-[280px] drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]"
                 />
               </div>
             </motion.div>
@@ -113,7 +113,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">
-                The <span className="text-[hsl(175,50%,50%)]">cedarcare</span> Group
+                The <span className="text-[hsl(217,91%,70%)]">cedarcare</span> Group
               </h1>
               <motion.div
                 initial={{ width: 0 }}
@@ -145,7 +145,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                 {[0, 1, 2].map((i) => (
                   <motion.div
                     key={i}
-                    className="w-2 h-2 rounded-full bg-[hsl(175,50%,50%)]"
+                    className="w-2 h-2 rounded-full bg-[hsl(217,91%,70%)]"
                     animate={{
                       scale: [1, 1.3, 1],
                       opacity: [0.5, 1, 0.5]

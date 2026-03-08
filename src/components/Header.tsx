@@ -86,7 +86,7 @@ const Header = () => {
                       }`}
                     >
                       {item.name}
-                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(175,50%,45%)] transition-all duration-300 w-0 group-hover:w-3/4" />
+                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(217,91%,60%)] transition-all duration-300 w-0 group-hover:w-3/4" />
                     </a>
                   ) : (
                     <Link
@@ -103,7 +103,7 @@ const Header = () => {
                     >
                       {item.name}
                       <span
-                        className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(175,50%,45%)] transition-all duration-300 ${
+                        className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-[hsl(217,91%,60%)] transition-all duration-300 ${
                           isActive(item.href) ? "w-3/4" : "w-0 group-hover:w-3/4"
                         }`}
                       />
@@ -215,7 +215,7 @@ const Header = () => {
                         className="flex items-center justify-between py-4 text-lg border-b border-white/10 transition-colors group text-white/90 hover:text-white"
                       >
                         <span>{item.name}</span>
-                        <ChevronRight className="w-5 h-5 text-[hsl(175,50%,45%)] group-hover:translate-x-1 transition-transform" />
+                        <ChevronRight className="w-5 h-5 text-[hsl(217,91%,60%)] group-hover:translate-x-1 transition-transform" />
                       </a>
                     ) : (
                       <Link
@@ -223,12 +223,12 @@ const Header = () => {
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`flex items-center justify-between py-4 text-lg border-b border-white/10 transition-colors group ${
                           isActive(item.href)
-                            ? "text-[hsl(175,50%,45%)]"
+                            ? "text-[hsl(217,91%,60%)]"
                             : "text-white/90 hover:text-white"
                         }`}
                       >
                         <span>{item.name}</span>
-                        <ChevronRight className="w-5 h-5 text-[hsl(175,50%,45%)] group-hover:translate-x-1 transition-transform" />
+                        <ChevronRight className="w-5 h-5 text-[hsl(217,91%,60%)] group-hover:translate-x-1 transition-transform" />
                       </Link>
                     )}
                   </motion.div>
@@ -243,7 +243,7 @@ const Header = () => {
                 className="mt-8"
               >
                 <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button className="w-full bg-[hsl(175,50%,45%)] hover:bg-[hsl(175,50%,40%)] text-white rounded-full py-6 text-lg">
+                  <Button className="w-full bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,50%)] text-white rounded-full py-6 text-lg">
                     <Phone className="w-5 h-5 mr-2" />
                     Contact Us
                   </Button>
@@ -261,9 +261,9 @@ const Header = () => {
                   <input
                     type="text"
                     placeholder="Search..."
-                    className="w-full px-5 py-4 bg-white/10 border border-white/10 rounded-full text-white placeholder-white/50 focus:outline-none focus:border-[hsl(175,50%,45%)]"
+                    className="w-full px-5 py-4 bg-white/10 border border-white/10 rounded-full text-white placeholder-white/50 focus:outline-none focus:border-[hsl(217,91%,60%)]"
                   />
-                  <Search className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[hsl(175,50%,45%)]" />
+                  <Search className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[hsl(217,91%,60%)]" />
                 </div>
               </motion.div>
             </motion.nav>
@@ -297,7 +297,7 @@ const Header = () => {
                 type="text"
                 placeholder="Search for services, information..."
                 autoFocus
-                className="w-full px-8 py-5 bg-white rounded-2xl text-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-4 focus:ring-[hsl(175,50%,45%)]/30 shadow-2xl"
+                className="w-full px-8 py-5 bg-white rounded-2xl text-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-4 focus:ring-[hsl(217,91%,60%)]/30 shadow-2xl"
               />
               <button
                 onClick={() => setIsSearchOpen(false)}

@@ -13,7 +13,7 @@ const services = [
     description: "State-of-the-art medical facilities offering comprehensive healthcare services with internationally trained professionals and cutting-edge technology.",
     features: ["24/7 Emergency Care", "Advanced Diagnostics", "Specialist Consultations", "Inpatient Services"],
     image: hospitalBuilding,
-    color: "hsl(175, 50%, 45%)",
+    color: "hsl(217, 91%, 60%)",
     link: "#hospital"
   },
   {
@@ -57,7 +57,7 @@ const ServicesSection = () => {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Three Pillars of{" "}
-            <span className="text-[hsl(175,50%,45%)]">Healthcare Excellence</span>
+            <span className="text-[hsl(217,91%,60%)]">Healthcare Excellence</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             cedarcare Group operates across three integrated divisions, each committed to 

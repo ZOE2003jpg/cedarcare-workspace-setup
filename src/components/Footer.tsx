@@ -46,7 +46,7 @@ const Footer = () => {
       <div 
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-10 pointer-events-none"
         style={{ 
-          background: "radial-gradient(ellipse, hsl(175, 50%, 45%) 0%, transparent 70%)"
+          background: "radial-gradient(ellipse, hsl(217, 91%, 60%) 0%, transparent 70%)"
         }}
       />
 
@@ -73,15 +73,15 @@ const Footer = () => {
 
             {/* Contact info */}
             <div className="space-y-3">
-              <a href="mailto:info@cedarcare.com" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors">
+              <a href="mailto:info@cedarcare.com" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors">
                 <Mail className="w-4 h-4" />
                 <span>info@cedarcare.com</span>
               </a>
-              <a href="tel:+2347062641810" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors">
+              <a href="tel:+2347062641810" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors">
                 <Phone className="w-4 h-4" />
                 <span>+234 706 264 1810</span>
               </a>
-              <a href="tel:+2349090003798" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors">
+              <a href="tel:+2349090003798" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors">
                 <Phone className="w-4 h-4" />
                 <span>+234 909 000 3798</span>
               </a>
@@ -100,7 +100,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors"
+                    className="text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors"
+                    className="text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -132,7 +132,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors"
+                    className="text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -159,7 +159,7 @@ const Footer = () => {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[hsl(175,50%,45%)]/20 flex items-center justify-center text-white/60 hover:text-[hsl(175,50%,50%)] transition-all"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[hsl(217,91%,60%)]/20 flex items-center justify-center text-white/60 hover:text-[hsl(217,91%,70%)] transition-all"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -171,7 +171,7 @@ const Footer = () => {
           {/* Back to top */}
           <motion.button
             onClick={scrollToTop}
-            className="flex items-center space-x-2 text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors"
+            className="flex items-center space-x-2 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors"
             whileHover={{ y: -2 }}
           >
             <span className="text-sm">Back to top</span>

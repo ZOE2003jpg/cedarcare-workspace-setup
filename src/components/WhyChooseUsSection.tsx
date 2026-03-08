@@ -30,11 +30,11 @@ const reasons = [
 ];
 
 const services = [
-  { icon: Stethoscope, title: "General & Family Medicine", color: "hsl(175,50%,40%)" },
+  { icon: Stethoscope, title: "General & Family Medicine", color: "hsl(217,91%,60%)" },
   { icon: Baby, title: "Pediatrics", color: "hsl(210,50%,45%)" },
   { icon: Heart, title: "Obstetrics & Gynecology", color: "hsl(340,60%,50%)" },
   { icon: FlaskConical, title: "Diagnostics & Laboratory", color: "hsl(40,70%,50%)" },
-  { icon: Pill, title: "Pharmacy Services", color: "hsl(175,50%,40%)" },
+  { icon: Pill, title: "Pharmacy Services", color: "hsl(217,91%,60%)" },
   { icon: Ambulance, title: "Emergency Care", color: "hsl(0,70%,50%)" },
 ];
 
@@ -60,7 +60,7 @@ const WhyChooseUsSection = () => {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Excellence in Every Aspect of{" "}
-            <span className="text-[hsl(175,50%,45%)]">Healthcare</span>
+            <span className="text-[hsl(217,91%,60%)]">Healthcare</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             At cedarcare Hospital, we deliver high-quality, patient-centered healthcare 

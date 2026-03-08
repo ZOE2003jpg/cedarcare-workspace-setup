@@ -18,7 +18,7 @@ const CTASection = () => {
         <div 
           className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10"
           style={{ 
-            background: "radial-gradient(circle, hsl(175, 50%, 50%) 0%, transparent 70%)"
+            background: "radial-gradient(circle, hsl(217, 91%, 60%) 0%, transparent 70%)"
           }}
         />
         <div 
@@ -58,7 +58,7 @@ const CTASection = () => {
             className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight"
           >
             Your Health Is Our{" "}
-            <span className="text-[hsl(175,50%,50%)]">Priority</span>
+            <span className="text-[hsl(217,91%,70%)]">Priority</span>
           </motion.h2>
 
           <motion.p
@@ -81,7 +81,7 @@ const CTASection = () => {
           >
             <Button 
               size="lg"
-              className="bg-[hsl(175,50%,45%)] hover:bg-[hsl(175,50%,40%)] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,50%)] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Calendar className="w-5 h-5 mr-2" />
               Book Appointment
@@ -105,12 +105,12 @@ const CTASection = () => {
             className="grid md:grid-cols-3 gap-6"
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-[hsl(175,50%,45%)]/20 flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-[hsl(175,50%,50%)]" />
+              <div className="w-12 h-12 rounded-xl bg-[hsl(217,91%,60%)]/20 flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-6 h-6 text-[hsl(217,91%,70%)]" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Emergency Line</h3>
               <p className="text-white/60 mb-3">Available 24/7</p>
-              <a href="tel:+2347062641810" className="text-[hsl(175,50%,50%)] font-medium hover:underline">
+              <a href="tel:+2347062641810" className="text-[hsl(217,91%,70%)] font-medium hover:underline">
                 +234 706 264 1810
               </a>
             </div>
@@ -130,7 +130,7 @@ const CTASection = () => {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
               <p className="text-white/60">Lagos, Nigeria</p>
-              <a href="#" className="inline-flex items-center text-[hsl(175,50%,50%)] font-medium hover:underline mt-2">
+              <a href="#" className="inline-flex items-center text-[hsl(217,91%,70%)] font-medium hover:underline mt-2">
                 Get Directions
                 <ArrowRight className="w-4 h-4 ml-1" />
               </a>

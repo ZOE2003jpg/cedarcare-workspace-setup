@@ -45,8 +45,8 @@ const Contact = () => {
       {/* Hero Banner */}
       <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(175,50%,45%)] rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[hsl(175,50%,45%)] rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <motion.div
@@ -59,7 +59,7 @@ const Contact = () => {
               <span className="text-sm text-white/90 font-medium">Get In Touch</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Contact <span className="text-[hsl(175,50%,45%)]">Us</span>
+              Contact <span className="text-[hsl(217,91%,60%)]">Us</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
               We're here to help. Reach out to us for appointments, enquiries, complaints, or feedback. Our patient care team is ready to assist you.
@@ -174,8 +174,8 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
-                    <MessageSquare className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
+                    <MessageSquare className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">WhatsApp</h4>

@@ -60,8 +60,8 @@ const Services = () => {
         {/* Hero Banner */}
         <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(175,50%,45%)] rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[hsl(175,50%,45%)] rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
           </div>
           <div className="container mx-auto px-4 md:px-8 relative z-10">
             <motion.div
@@ -74,7 +74,7 @@ const Services = () => {
                 <span className="text-sm text-white/90 font-medium">What We Offer</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Our <span className="text-[hsl(175,50%,45%)]">Services</span>
+                Our <span className="text-[hsl(217,91%,60%)]">Services</span>
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
                 Comprehensive Healthcare Services at cedarcare Hospital. We offer a full spectrum of medical services designed to meet the healthcare needs of individuals, families, and communities.
@@ -104,7 +104,7 @@ const Services = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
                     <div className="absolute bottom-4 left-4">
-                      <div className="w-14 h-14 rounded-xl bg-[hsl(175,50%,45%)] flex items-center justify-center shadow-lg">
+                      <div className="w-14 h-14 rounded-xl bg-[hsl(217,91%,60%)] flex items-center justify-center shadow-lg">
                         <service.icon className="w-7 h-7 text-white" />
                       </div>
                     </div>
