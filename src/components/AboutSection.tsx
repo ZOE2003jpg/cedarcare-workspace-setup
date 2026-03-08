@@ -84,7 +84,7 @@ const AboutSection = () => {
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               Who We{" "}
-              <span className="text-[hsl(175,50%,45%)]">Are</span>
+              <span className="text-[hsl(217,91%,60%)]">Are</span>
             </h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
