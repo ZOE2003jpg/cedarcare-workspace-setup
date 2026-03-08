@@ -90,7 +90,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                   transition={{ delay: 0.5, duration: 0.8 }}
                   className="absolute w-40 h-40 rounded-full"
                   style={{ 
-                    background: "radial-gradient(circle, hsla(175, 50%, 45%, 0.3) 0%, transparent 70%)",
+                    background: "radial-gradient(circle, hsla(217, 91%, 60%, 0.3) 0%, transparent 70%)",
                     filter: "blur(8px)"
                   }}
                 />
