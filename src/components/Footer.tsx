@@ -77,7 +77,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4" />
                 <span>info@cedarcare.com</span>
               </a>
-              <a href="tel:+2347062641810" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(175,50%,50%)] transition-colors">
+              <a href="tel:+2347062641810" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors">
                 <Phone className="w-4 h-4" />
                 <span>+234 706 264 1810</span>
               </a>
