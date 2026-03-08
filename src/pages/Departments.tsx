@@ -79,7 +79,7 @@ const departments = [
       "HMO Enrollment",
       "Coverage Guidance"
     ],
-    color: "hsl(175, 50%, 45%)",
+    color: "hsl(217, 91%, 60%)",
     hasVideo: false,
   },
 ];
