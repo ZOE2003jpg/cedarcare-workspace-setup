@@ -223,7 +223,7 @@ const Header = () => {
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`flex items-center justify-between py-4 text-lg border-b border-white/10 transition-colors group ${
                           isActive(item.href)
-                            ? "text-[hsl(175,50%,45%)]"
+                            ? "text-[hsl(217,91%,60%)]"
                             : "text-white/90 hover:text-white"
                         }`}
                       >
