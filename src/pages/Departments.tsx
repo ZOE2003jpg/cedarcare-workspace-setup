@@ -49,7 +49,7 @@ const departments = [
       "OTC Products",
       "Immunizations"
     ],
-    color: "hsl(175, 50%, 45%)",
+    color: "hsl(217, 91%, 60%)",
     hasVideo: true,
   },
   {
