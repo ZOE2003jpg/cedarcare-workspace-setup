@@ -56,7 +56,7 @@ const Header = () => {
                 <img
                   src={logo}
                   alt="cedarcare Hospital"
-                  className="h-10 md:h-12 w-auto"
+                  className="h-10 md:h-12 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
                 />
               </motion.div>
             </Link>
