@@ -159,7 +159,7 @@ const Footer = () => {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[hsl(175,50%,45%)]/20 flex items-center justify-center text-white/60 hover:text-[hsl(175,50%,50%)] transition-all"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[hsl(217,91%,60%)]/20 flex items-center justify-center text-white/60 hover:text-[hsl(217,91%,70%)] transition-all"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
