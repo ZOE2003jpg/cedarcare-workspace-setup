@@ -293,7 +293,7 @@ const HeroSection = () => {
             <Link to="/services">
               <Button
                 size="lg"
-                className="bg-[hsl(175,50%,40%)] hover:bg-[hsl(175,50%,35%)] text-white px-8 py-6 rounded-full text-base font-semibold group"
+                className="bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,50%)] text-white px-8 py-6 rounded-full text-base font-semibold group"
               >
                 Our Services
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

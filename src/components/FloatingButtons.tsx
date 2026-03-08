@@ -16,7 +16,7 @@ const FloatingButtons = () => {
       icon: Phone,
       label: "Call Now",
       href: "tel:+2347062641810",
-      color: "bg-[hsl(175,50%,45%)] hover:bg-[hsl(175,50%,40%)]",
+      color: "bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,50%)]",
     },
     {
       icon: MessageCircle,

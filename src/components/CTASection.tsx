@@ -130,7 +130,7 @@ const CTASection = () => {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
               <p className="text-white/60">Lagos, Nigeria</p>
-              <a href="#" className="inline-flex items-center text-[hsl(175,50%,50%)] font-medium hover:underline mt-2">
+              <a href="#" className="inline-flex items-center text-[hsl(217,91%,70%)] font-medium hover:underline mt-2">
                 Get Directions
                 <ArrowRight className="w-4 h-4 ml-1" />
               </a>

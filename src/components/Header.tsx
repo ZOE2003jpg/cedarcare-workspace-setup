@@ -297,7 +297,7 @@ const Header = () => {
                 type="text"
                 placeholder="Search for services, information..."
                 autoFocus
-                className="w-full px-8 py-5 bg-white rounded-2xl text-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-4 focus:ring-[hsl(175,50%,45%)]/30 shadow-2xl"
+                className="w-full px-8 py-5 bg-white rounded-2xl text-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-4 focus:ring-[hsl(217,91%,60%)]/30 shadow-2xl"
               />
               <button
                 onClick={() => setIsSearchOpen(false)}
