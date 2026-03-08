@@ -263,7 +263,7 @@ const Header = () => {
                     placeholder="Search..."
                     className="w-full px-5 py-4 bg-white/10 border border-white/10 rounded-full text-white placeholder-white/50 focus:outline-none focus:border-[hsl(217,91%,60%)]"
                   />
-                  <Search className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[hsl(175,50%,45%)]" />
+                  <Search className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[hsl(217,91%,60%)]" />
                 </div>
               </motion.div>
             </motion.nav>
