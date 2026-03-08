@@ -18,7 +18,7 @@ const CTASection = () => {
         <div 
           className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10"
           style={{ 
-            background: "radial-gradient(circle, hsl(175, 50%, 50%) 0%, transparent 70%)"
+            background: "radial-gradient(circle, hsl(217, 91%, 60%) 0%, transparent 70%)"
           }}
         />
         <div 
