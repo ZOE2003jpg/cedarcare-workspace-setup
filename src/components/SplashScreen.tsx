@@ -145,7 +145,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                 {[0, 1, 2].map((i) => (
                   <motion.div
                     key={i}
-                    className="w-2 h-2 rounded-full bg-[hsl(175,50%,50%)]"
+                    className="w-2 h-2 rounded-full bg-[hsl(217,91%,70%)]"
                     animate={{
                       scale: [1, 1.3, 1],
                       opacity: [0.5, 1, 0.5]
