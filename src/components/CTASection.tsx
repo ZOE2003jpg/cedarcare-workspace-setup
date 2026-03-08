@@ -110,7 +110,7 @@ const CTASection = () => {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Emergency Line</h3>
               <p className="text-white/60 mb-3">Available 24/7</p>
-              <a href="tel:+2347062641810" className="text-[hsl(175,50%,50%)] font-medium hover:underline">
+              <a href="tel:+2347062641810" className="text-[hsl(217,91%,70%)] font-medium hover:underline">
                 +234 706 264 1810
               </a>
             </div>
