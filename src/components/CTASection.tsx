@@ -105,8 +105,8 @@ const CTASection = () => {
             className="grid md:grid-cols-3 gap-6"
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-[hsl(175,50%,45%)]/20 flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-[hsl(175,50%,50%)]" />
+              <div className="w-12 h-12 rounded-xl bg-[hsl(217,91%,60%)]/20 flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-6 h-6 text-[hsl(217,91%,70%)]" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Emergency Line</h3>
               <p className="text-white/60 mb-3">Available 24/7</p>
