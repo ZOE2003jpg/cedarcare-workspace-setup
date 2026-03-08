@@ -13,7 +13,7 @@ const services = [
     description: "State-of-the-art medical facilities offering comprehensive healthcare services with internationally trained professionals and cutting-edge technology.",
     features: ["24/7 Emergency Care", "Advanced Diagnostics", "Specialist Consultations", "Inpatient Services"],
     image: hospitalBuilding,
-    color: "hsl(175, 50%, 45%)",
+    color: "hsl(217, 91%, 60%)",
     link: "#hospital"
   },
   {
