@@ -43,7 +43,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               animate={{ opacity: 0.1, scale: 1 }}
               transition={{ duration: 2, ease: "easeOut" }}
               className="absolute -top-32 -right-32 w-96 h-96 rounded-full"
-              style={{ background: "radial-gradient(circle, hsl(175, 50%, 45%) 0%, transparent 70%)" }}
+              style={{ background: "radial-gradient(circle, hsl(217, 91%, 60%) 0%, transparent 70%)" }}
             />
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
