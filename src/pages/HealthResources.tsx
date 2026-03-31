@@ -157,9 +157,6 @@ const HealthResources = () => {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {article.excerpt}
                   </p>
-                  <button className="inline-flex items-center text-primary font-medium hover:gap-3 gap-2 transition-all">
-                    Read More <ArrowRight className="w-4 h-4" />
-                  </button>
                 </div>
               </motion.article>
             ))}
