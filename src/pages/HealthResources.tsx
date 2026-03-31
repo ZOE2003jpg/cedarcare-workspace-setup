@@ -45,28 +45,6 @@ const healthArticles = [
   },
 ];
 
-const patientResources = [
-  {
-    icon: FileText,
-    title: "Admission Guidelines",
-    description: "Everything you need to know about hospital admission and discharge procedures.",
-  },
-  {
-    icon: Shield,
-    title: "Insurance & HMO Information",
-    description: "Details on accepted HMOs, insurance claims, and coverage verification.",
-  },
-  {
-    icon: BookOpen,
-    title: "Patient Rights & Responsibilities",
-    description: "Understanding your rights as a patient and your role in shared care.",
-  },
-  {
-    icon: FileText,
-    title: "Billing & Payment Guide",
-    description: "Clear information on our billing process for private, corporate, and insured patients.",
-  },
-];
 
 const wellnessTips = [
   "Stay hydrated - drink at least 8 glasses of water daily",
