@@ -52,28 +52,30 @@ const Blog = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary via-primary to-accent overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Health & Wellness Blog
-            </h1>
-            <p className="text-lg md:text-xl text-white/80">
-              Stay informed with the latest health tips, medical insights, and wellness advice from our expert team.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+       <section className="relative pt-32 pb-20 overflow-hidden">
+         <div className="absolute inset-0">
+           <img src={cedarcarePharmacy} alt="Health Blog" className="w-full h-full object-cover" />
+           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/80 to-[hsl(210,50%,10%)]/60" />
+         </div>
+         <div className="container mx-auto px-4 md:px-8 relative z-10">
+           <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8 }}
+             className="max-w-3xl"
+           >
+             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+               <span className="text-sm text-white/90 font-medium">Latest Updates</span>
+             </div>
+             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+               Health & Wellness <span className="text-[hsl(217,91%,60%)]">Blog</span>
+             </h1>
+             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
+               Stay informed with the latest health tips, medical insights, and wellness advice from our expert team.
+             </p>
+           </motion.div>
+         </div>
+       </section>
 
       {/* Blog Posts Grid */}
       <section className="py-20">

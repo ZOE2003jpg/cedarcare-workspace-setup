@@ -111,15 +111,25 @@ const Careers = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 No Current Openings
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                We do not currently have any open vacancies or internship positions. However, we are always interested in hearing from talented and passionate healthcare professionals.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                If you would like to be considered for future opportunities, please submit your details using the form. We will keep your information on file and reach out when a suitable position becomes available.
-              </p>
+               </h2>
+               <p className="text-muted-foreground leading-relaxed mb-6">
+                 We do not currently have any open vacancies or internship positions. However, we are always interested in hearing from talented and passionate healthcare professionals.
+               </p>
+               <p className="text-muted-foreground leading-relaxed mb-8">
+                 If you would like to be considered for future opportunities, please submit your details using the form or apply directly through our HR portal.
+               </p>
+               <a
+                 href="https://apply.bizedgeapp.com/cedarcare-hospital/175469876032/315"
+                 target="_blank"
+                 rel="noopener noreferrer"
+               >
+                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-lg">
+                   <ExternalLink className="w-5 h-5 mr-2" />
+                   Apply via HR Portal
+                 </Button>
+               </a>
             </motion.div>
 
             {/* General Application Form */}
