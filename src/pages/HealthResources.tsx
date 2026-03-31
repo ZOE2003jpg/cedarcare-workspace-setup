@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
-import { Heart, Activity, Baby, Shield, Stethoscope, BookOpen, FileText } from "lucide-react";
+import { Heart, Activity, Baby, Shield, Stethoscope } from "lucide-react";
 import cedarcareWard from "@/assets/cedarcare-ward.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -45,28 +45,6 @@ const healthArticles = [
   },
 ];
 
-const patientResources = [
-  {
-    icon: FileText,
-    title: "Admission Guidelines",
-    description: "Everything you need to know about hospital admission and discharge procedures.",
-  },
-  {
-    icon: Shield,
-    title: "Insurance & HMO Information",
-    description: "Details on accepted HMOs, insurance claims, and coverage verification.",
-  },
-  {
-    icon: BookOpen,
-    title: "Patient Rights & Responsibilities",
-    description: "Understanding your rights as a patient and your role in shared care.",
-  },
-  {
-    icon: FileText,
-    title: "Billing & Payment Guide",
-    description: "Clear information on our billing process for private, corporate, and insured patients.",
-  },
-];
 
 const wellnessTips = [
   "Stay hydrated - drink at least 8 glasses of water daily",
@@ -159,49 +137,6 @@ const HealthResources = () => {
         </div>
       </section>
 
-      {/* Patient Education */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4 md:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Patient Education
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Downloadable materials and guidelines to help you navigate your healthcare journey.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {patientResources.map((resource, index) => (
-              <motion.div
-                key={resource.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg flex items-start gap-4 group hover:shadow-xl transition-all"
-              >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <resource.icon className="w-7 h-7 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {resource.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {resource.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Wellness Tips */}
       <section className="py-20">
