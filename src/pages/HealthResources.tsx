@@ -81,7 +81,7 @@ const HealthResources = () => {
                Health <span className="text-[hsl(217,91%,60%)]">Resources</span>
              </h1>
              <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-               Educational materials and resources to help you maintain optimal health. Access expert-written articles, downloadable guides, and wellness tips.
+               Educational materials and resources to help you maintain optimal health. Access expert-written articles and wellness tips from our medical team.
              </p>
            </motion.div>
          </div>
