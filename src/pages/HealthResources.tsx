@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
-import { Heart, Activity, Baby, Shield, Stethoscope, Download, BookOpen, FileText, ArrowRight } from "lucide-react";
+import { Heart, Activity, Baby, Shield, Stethoscope, BookOpen, FileText } from "lucide-react";
 import cedarcareWard from "@/assets/cedarcare-ward.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";

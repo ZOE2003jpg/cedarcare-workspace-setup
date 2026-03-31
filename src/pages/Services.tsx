@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Stethoscope, Baby, Heart, FlaskConical, Pill, Ambulance, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Stethoscope, Baby, Heart, FlaskConical, Pill, Ambulance } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 
 import doctorPatientNew from "@/assets/doctor-patient-new.jpg";
