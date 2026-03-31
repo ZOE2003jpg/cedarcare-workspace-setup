@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Stethoscope, Baby, Heart, FlaskConical, Pill, Ambulance, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Stethoscope, Baby, Heart, FlaskConical, Pill, Ambulance } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 
 import doctorPatientNew from "@/assets/doctor-patient-new.jpg";
@@ -117,12 +116,6 @@ const Services = () => {
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       {service.description}
                     </p>
-                    <Link 
-                      to="/services" 
-                      className="inline-flex items-center text-primary font-medium hover:gap-3 gap-2 transition-all"
-                    >
-                      View More <ArrowRight className="w-4 h-4" />
-                    </Link>
                   </div>
                 </motion.div>
               ))}

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
-import { Heart, Activity, Baby, Shield, Stethoscope, Download, BookOpen, FileText, ArrowRight } from "lucide-react";
+import { Heart, Activity, Baby, Shield, Stethoscope, BookOpen, FileText } from "lucide-react";
 import cedarcareWard from "@/assets/cedarcare-ward.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -50,26 +50,21 @@ const patientResources = [
     icon: FileText,
     title: "Admission Guidelines",
     description: "Everything you need to know about hospital admission and discharge procedures.",
-    downloadable: true,
-    downloadUrl: "https://docs.google.com/document/d/1GgqFEgoPf2Lq5Yo71YoZ-jJ1KDEDJKrG/edit?usp=sharing&ouid=116901950610006114030&rtpof=true&sd=true",
   },
   {
     icon: Shield,
     title: "Insurance & HMO Information",
     description: "Details on accepted HMOs, insurance claims, and coverage verification.",
-    downloadable: true,
   },
   {
     icon: BookOpen,
     title: "Patient Rights & Responsibilities",
     description: "Understanding your rights as a patient and your role in shared care.",
-    downloadable: true,
   },
   {
     icon: FileText,
     title: "Billing & Payment Guide",
     description: "Clear information on our billing process for private, corporate, and insured patients.",
-    downloadable: true,
   },
 ];
 
@@ -157,9 +152,6 @@ const HealthResources = () => {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {article.excerpt}
                   </p>
-                  <button className="inline-flex items-center text-primary font-medium hover:gap-3 gap-2 transition-all">
-                    Read More <ArrowRight className="w-4 h-4" />
-                  </button>
                 </div>
               </motion.article>
             ))}
@@ -204,18 +196,6 @@ const HealthResources = () => {
                   <p className="text-muted-foreground text-sm mb-4">
                     {resource.description}
                   </p>
-                  {resource.downloadable && (
-                     <a
-                       href={resource.downloadUrl || "#"}
-                       target="_blank"
-                       rel="noopener noreferrer"
-                     >
-                       <Button variant="outline" size="sm" className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                         <Download className="w-4 h-4 mr-2" />
-                         Download PDF
-                       </Button>
-                     </a>
-                   )}
                 </div>
               </motion.div>
             ))}
