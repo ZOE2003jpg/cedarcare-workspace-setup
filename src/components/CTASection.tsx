@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, Calendar, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -79,21 +80,25 @@ const CTASection = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap justify-center gap-4 mb-16"
           >
-            <Button 
-              size="lg"
-              className="bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,50%)] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Appointment
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white/30 bg-white/5 text-white hover:bg-white/10 hover:border-white/50 px-8 py-6 text-lg rounded-full backdrop-blur-sm"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call Us Now
-            </Button>
+            <Link to="/contact">
+               <Button 
+                 size="lg"
+                 className="bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,50%)] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+               >
+                 <Calendar className="w-5 h-5 mr-2" />
+                 Book Appointment
+               </Button>
+             </Link>
+             <a href="tel:+2347062641810">
+               <Button
+                 size="lg"
+                 variant="outline"
+                 className="border-2 border-white/30 bg-white/5 text-white hover:bg-white/10 hover:border-white/50 px-8 py-6 text-lg rounded-full backdrop-blur-sm"
+               >
+                 <Phone className="w-5 h-5 mr-2" />
+                 Call Us Now
+               </Button>
+             </a>
           </motion.div>
 
           {/* Contact cards */}
@@ -130,10 +135,10 @@ const CTASection = () => {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
               <p className="text-white/60">Lagos, Nigeria</p>
-              <a href="#" className="inline-flex items-center text-[hsl(217,91%,70%)] font-medium hover:underline mt-2">
-                Get Directions
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
+               <a href="https://www.google.com/maps/search/cedarcare+hospital+lagos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[hsl(217,91%,70%)] font-medium hover:underline mt-2">
+                 Get Directions
+                 <ArrowRight className="w-4 h-4 ml-1" />
+               </a>
             </div>
           </motion.div>
         </div>

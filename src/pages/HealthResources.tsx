@@ -3,7 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { Heart, Activity, Baby, Shield, Stethoscope, Download, BookOpen, FileText, ArrowRight } from "lucide-react";
+import cedarcareWard from "@/assets/cedarcare-ward.jpg";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const healthArticles = [
   {
@@ -49,6 +51,7 @@ const patientResources = [
     title: "Admission Guidelines",
     description: "Everything you need to know about hospital admission and discharge procedures.",
     downloadable: true,
+    downloadUrl: "https://docs.google.com/document/d/1GgqFEgoPf2Lq5Yo71YoZ-jJ1KDEDJKrG/edit?usp=sharing&ouid=116901950610006114030&rtpof=true&sd=true",
   },
   {
     icon: Shield,
@@ -86,30 +89,30 @@ const HealthResources = () => {
       <Header />
       
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
-        </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
-          >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="text-sm text-white/90 font-medium">Stay Informed</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Health <span className="text-[hsl(217,91%,60%)]">Resources</span>
-            </h1>
-            <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-              Educational materials and resources to help you maintain optimal health. Access expert-written articles, downloadable guides, and wellness tips.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+       <section className="relative pt-32 pb-20 overflow-hidden">
+         <div className="absolute inset-0">
+           <img src={cedarcareWard} alt="Health Resources" className="w-full h-full object-cover" />
+           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/80 to-[hsl(210,50%,10%)]/60" />
+         </div>
+         <div className="container mx-auto px-4 md:px-8 relative z-10">
+           <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8 }}
+             className="max-w-3xl"
+           >
+             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+               <span className="text-sm text-white/90 font-medium">Stay Informed</span>
+             </div>
+             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+               Health <span className="text-[hsl(217,91%,60%)]">Resources</span>
+             </h1>
+             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
+               Educational materials and resources to help you maintain optimal health. Access expert-written articles, downloadable guides, and wellness tips.
+             </p>
+           </motion.div>
+         </div>
+       </section>
 
       {/* Health Articles */}
       <section className="py-20 md:py-28">
@@ -202,11 +205,17 @@ const HealthResources = () => {
                     {resource.description}
                   </p>
                   {resource.downloadable && (
-                    <Button variant="outline" size="sm" className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <Download className="w-4 h-4 mr-2" />
-                      Download PDF
-                    </Button>
-                  )}
+                     <a
+                       href={resource.downloadUrl || "#"}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                     >
+                       <Button variant="outline" size="sm" className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                         <Download className="w-4 h-4 mr-2" />
+                         Download PDF
+                       </Button>
+                     </a>
+                   )}
                 </div>
               </motion.div>
             ))}
@@ -261,12 +270,16 @@ const HealthResources = () => {
                 Our medical team is here to help. Schedule a consultation or reach out with your health concerns.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-primary hover:bg-white/90 rounded-full px-6">
-                  Book Consultation
-                </Button>
-                <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full px-6">
-                  Contact Us
-                </Button>
+               <Link to="/contact">
+                   <Button className="bg-white text-primary hover:bg-white/90 rounded-full px-6">
+                     Book Consultation
+                   </Button>
+                 </Link>
+                 <Link to="/contact">
+                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full px-6">
+                     Contact Us
+                   </Button>
+                 </Link>
               </div>
             </motion.div>
           </div>

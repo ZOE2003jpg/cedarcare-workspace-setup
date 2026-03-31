@@ -5,6 +5,7 @@ import PageTransition from "@/components/PageTransition";
 import { Stethoscope, Heart, Pill, Building2, Shield, ArrowRight, Phone, Mail, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import cedarcareLabTechnician from "@/assets/cedarcare-lab-technician.jpg";
 
 const departments = [
   {
@@ -91,30 +92,30 @@ const Departments = () => {
       <Header />
       
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[hsl(217,91%,60%)] rounded-full blur-3xl" />
-        </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
-          >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="text-sm text-white/90 font-medium">Our Specialties</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              <span className="text-[hsl(217,91%,60%)]">Departments</span>
-            </h1>
-            <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-              Departments Overview. Explore our specialized departments providing comprehensive care across all medical disciplines, each staffed with experienced professionals dedicated to your wellbeing.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+       <section className="relative pt-32 pb-20 overflow-hidden">
+         <div className="absolute inset-0">
+           <img src={cedarcareLabTechnician} alt="Departments" className="w-full h-full object-cover" />
+           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/80 to-[hsl(210,50%,10%)]/60" />
+         </div>
+         <div className="container mx-auto px-4 md:px-8 relative z-10">
+           <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8 }}
+             className="max-w-3xl"
+           >
+             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+               <span className="text-sm text-white/90 font-medium">Our Specialties</span>
+             </div>
+             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+               <span className="text-[hsl(217,91%,60%)]">Departments</span>
+             </h1>
+             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
+               Departments Overview. Explore our specialized departments providing comprehensive care across all medical disciplines, each staffed with experienced professionals dedicated to your wellbeing.
+             </p>
+           </motion.div>
+         </div>
+       </section>
 
       {/* Departments List */}
       <section className="py-20 md:py-28">
@@ -190,10 +191,12 @@ const Departments = () => {
               Our patient care team can guide you to the appropriate department for your healthcare needs.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-full text-lg">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us
-              </Button>
+              <a href="tel:+2347062641810">
+                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-full text-lg">
+                   <Phone className="w-5 h-5 mr-2" />
+                   Call Us
+                 </Button>
+               </a>
               <Link to="/contact">
                 <Button variant="outline" className="px-8 py-6 rounded-full text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   <Mail className="w-5 h-5 mr-2" />
