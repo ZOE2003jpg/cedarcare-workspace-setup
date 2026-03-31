@@ -117,12 +117,6 @@ const Services = () => {
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       {service.description}
                     </p>
-                    <Link 
-                      to="/services" 
-                      className="inline-flex items-center text-primary font-medium hover:gap-3 gap-2 transition-all"
-                    >
-                      View More <ArrowRight className="w-4 h-4" />
-                    </Link>
                   </div>
                 </motion.div>
               ))}
