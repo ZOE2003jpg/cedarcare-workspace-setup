@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import Footer from "@/components/Footer";
-import { Users, Award, Heart, BookOpen, Send } from "lucide-react";
+import { Users, Award, Heart, BookOpen, Send, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import cedarcareReception from "@/assets/cedarcare-reception.jpg";
 
 const whyWorkWithUs = [
   {
