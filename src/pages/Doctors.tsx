@@ -10,7 +10,7 @@ const doctors = [
     specialty: "General Physician & Family Medicine",
     qualifications: "MBBS, FMCP",
     experience: "15+ Years Experience",
-    availability: "Mon - Fri: 9AM - 5PM",
+    availability: "Available 24/7",
     image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face",
   },
   {
