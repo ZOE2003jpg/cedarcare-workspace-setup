@@ -191,10 +191,12 @@ const Departments = () => {
               Our patient care team can guide you to the appropriate department for your healthcare needs.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-full text-lg">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us
-              </Button>
+              <a href="tel:+2347062641810">
+                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-full text-lg">
+                   <Phone className="w-5 h-5 mr-2" />
+                   Call Us
+                 </Button>
+               </a>
               <Link to="/contact">
                 <Button variant="outline" className="px-8 py-6 rounded-full text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   <Mail className="w-5 h-5 mr-2" />
