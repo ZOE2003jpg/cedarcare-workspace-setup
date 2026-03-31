@@ -203,11 +203,17 @@ const HealthResources = () => {
                     {resource.description}
                   </p>
                   {resource.downloadable && (
-                    <Button variant="outline" size="sm" className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <Download className="w-4 h-4 mr-2" />
-                      Download PDF
-                    </Button>
-                  )}
+                     <a
+                       href={resource.downloadUrl || "#"}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                     >
+                       <Button variant="outline" size="sm" className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                         <Download className="w-4 h-4 mr-2" />
+                         Download PDF
+                       </Button>
+                     </a>
+                   )}
                 </div>
               </motion.div>
             ))}
