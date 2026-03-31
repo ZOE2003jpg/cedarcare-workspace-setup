@@ -26,7 +26,7 @@ const doctors = [
     specialty: "Pediatrics",
     qualifications: "MBBS, FMCPaed",
     experience: "10+ Years Experience",
-    availability: "Mon - Fri: 10AM - 6PM",
+    availability: "Available 24/7",
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop&crop=face",
   },
   {
