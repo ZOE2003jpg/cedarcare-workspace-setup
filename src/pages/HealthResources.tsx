@@ -50,26 +50,21 @@ const patientResources = [
     icon: FileText,
     title: "Admission Guidelines",
     description: "Everything you need to know about hospital admission and discharge procedures.",
-    downloadable: true,
-    downloadUrl: "https://docs.google.com/document/d/1GgqFEgoPf2Lq5Yo71YoZ-jJ1KDEDJKrG/edit?usp=sharing&ouid=116901950610006114030&rtpof=true&sd=true",
   },
   {
     icon: Shield,
     title: "Insurance & HMO Information",
     description: "Details on accepted HMOs, insurance claims, and coverage verification.",
-    downloadable: true,
   },
   {
     icon: BookOpen,
     title: "Patient Rights & Responsibilities",
     description: "Understanding your rights as a patient and your role in shared care.",
-    downloadable: true,
   },
   {
     icon: FileText,
     title: "Billing & Payment Guide",
     description: "Clear information on our billing process for private, corporate, and insured patients.",
-    downloadable: true,
   },
 ];
 
