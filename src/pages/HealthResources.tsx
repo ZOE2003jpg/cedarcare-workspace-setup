@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { Heart, Activity, Baby, Shield, Stethoscope, Download, BookOpen, FileText, ArrowRight } from "lucide-react";
+import cedarcareWard from "@/assets/cedarcare-ward.jpg";
 import { Button } from "@/components/ui/button";
 
 const healthArticles = [
