@@ -14,6 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import hospitalBuilding from "@/assets/hospital-building.jpg";
 
 const locations = [
   {
