@@ -50,7 +50,7 @@ const doctors = [
     specialty: "Diagnostics & Laboratory",
     qualifications: "MBBS, FMCPath",
     experience: "14+ Years Experience",
-    availability: "Mon - Fri: 8AM - 4PM",
+    availability: "Available 24/7",
     image: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=400&h=400&fit=crop&crop=face",
   },
 ];

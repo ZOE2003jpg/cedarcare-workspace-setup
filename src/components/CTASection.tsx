@@ -125,8 +125,7 @@ const CTASection = () => {
                 <Calendar className="w-6 h-6 text-[hsl(40,70%,50%)]" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Working Hours</h3>
-              <p className="text-white/60 mb-1">Mon - Fri: 8:00 AM - 8:00 PM</p>
-              <p className="text-white/60">Sat - Sun: 9:00 AM - 5:00 PM</p>
+              <p className="text-white/60">Open 24 Hours</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors">
