@@ -269,12 +269,16 @@ const HealthResources = () => {
                 Our medical team is here to help. Schedule a consultation or reach out with your health concerns.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-primary hover:bg-white/90 rounded-full px-6">
-                  Book Consultation
-                </Button>
-                <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full px-6">
-                  Contact Us
-                </Button>
+               <Link to="/contact">
+                   <Button className="bg-white text-primary hover:bg-white/90 rounded-full px-6">
+                     Book Consultation
+                   </Button>
+                 </Link>
+                 <Link to="/contact">
+                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full px-6">
+                     Contact Us
+                   </Button>
+                 </Link>
               </div>
             </motion.div>
           </div>
