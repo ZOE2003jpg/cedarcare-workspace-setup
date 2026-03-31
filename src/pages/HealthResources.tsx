@@ -49,6 +49,7 @@ const patientResources = [
     title: "Admission Guidelines",
     description: "Everything you need to know about hospital admission and discharge procedures.",
     downloadable: true,
+    downloadUrl: "https://docs.google.com/document/d/1GgqFEgoPf2Lq5Yo71YoZ-jJ1KDEDJKrG/edit?usp=sharing&ouid=116901950610006114030&rtpof=true&sd=true",
   },
   {
     icon: Shield,
